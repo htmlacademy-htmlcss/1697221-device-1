@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Оксана Тарасова](https://up.htmlacademy.ru/htmlcss-individual/1/user/1697221).
-* Наставник: `Неизвестно`.
+* Наставник: [Виталий Драгулин](https://htmlacademy.ru/profile/id1008501).
 
 ---
 
