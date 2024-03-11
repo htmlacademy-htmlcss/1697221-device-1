@@ -17,9 +17,11 @@
         </a>
 
         <form class="search-form" role="search" action="https://echo.htmlacademy.ru/" method="get">
-          <label class="visually-hidden">Введите ваш запрос для поиска по сайту.
-            <input type="search" name="search-field" placeholder="Поиск по сайту">
+          <label for="search-field">
+            <span class="visually-hidden">Введите ваш запрос для поиска по сайту.</span>
           </label>
+          <input type="search" id="search-field" name="search-field" placeholder="Поиск по сайту">
+
           <button class="search-button" type="submit">Найти</button>
         </form>
 
@@ -59,24 +61,72 @@
 
       <section class="slider">
         <h2 class="visually-hidden">Популярные товары</h2>
-        <h3 class="visually-hidden">Квадрокоптер с мощным лазером</h3>
-        <span class="slider-number">01</span>
-        <img class="slider-image" src="#" alt="Квадрокоптер.">
-        <button class="slider-button prev-button" type="button">
-          <span class="visually-hidden">Предыдущее фото.</span>
-        </button>
-        <button class="slider-button next-button" type="button">
-          <span class="visually-hidden">Следующее фото.</span>
-        </button>
-        <p class="slider-slogan">Порхает как бабочка, жалит как пчела!</p>
-        <p class="slider-text text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-        <a class="main-link" href="#">Подробнее</a>
-        <dl class="feature-table">
-          <dt class="feature-name">Дальность полета</dt>
-          <dd class="feature-value">800 м</dd>
-          <dt class="feature-name">Радиус поражения</dt>
-          <dd class="feature-value">50 м</dd>
-        </dl>
+        <ul class="slider-list">
+          <li class="slider-item">
+            <h3 class="visually-hidden">Квадрокоптер с мощным лазером</h3>
+            <span class="slider-number">01</span>
+            <img class="slider-image" src="#" alt="Квадрокоптер.">
+            <button class="slider-button prev-button" type="button">
+              <span class="visually-hidden">Предыдущее фото.</span>
+            </button>
+            <button class="slider-button next-button" type="button">
+              <span class="visually-hidden">Следующее фото.</span>
+            </button>
+            <p class="slider-slogan">Порхает как бабочка, жалит как пчела!</p>
+            <p class="slider-text text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <a class="main-link" href="#">Подробнее</a>
+            <dl class="feature-table">
+              <dt class="feature-name">Дальность полета</dt>
+              <dd class="feature-value">800 м</dd>
+              <dt class="feature-name">Радиус поражения</dt>
+              <dd class="feature-value">50 м</dd>
+            </dl>
+          </li>
+
+          <!-- Дополниетльные слайды -->
+
+          <li class="slider-item">
+            <h3 class="visually-hidden">Мотивирующий фитнес-браслет</h3>
+            <span class="slider-number">02</span>
+            <img class="slider-image" src="#" alt="Фитнес-браслет.">
+            <button class="slider-button prev-button" type="button">
+              <span class="visually-hidden">Предыдущее фото.</span>
+            </button>
+            <button class="slider-button next-button" type="button">
+              <span class="visually-hidden">Следующее фото.</span>
+            </button>
+            <p class="slider-slogan">Худеем правильно!</p>
+            <p class="slider-text text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <a class="main-link" href="#">Подробнее</a>
+            <dl class="feature-table">
+              <dt class="feature-name">Без подзарядки</dt>
+              <dd class="feature-value">48 часов</dd>
+            </dl>
+          </li>
+          <li class="slider-item">
+            <h3 class="visually-hidden">Самый длинный монопод</h3>
+            <span class="slider-number">03</span>
+            <img class="slider-image" src="#" alt="Монопод.">
+            <button class="slider-button prev-button" type="button">
+              <span class="visually-hidden">Предыдущее фото.</span>
+            </button>
+            <button class="slider-button next-button" type="button">
+              <span class="visually-hidden">Следующее фото.</span>
+            </button>
+            <p class="slider-slogan">Делай селфи, как Бен Стиллер! </p>
+            <p class="slider-text text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+            <a class="main-link" href="#">Подробнее</a>
+            <dl class="feature-table">
+              <dt class="feature-name">Длина палки</dt>
+              <dd class="feature-value">8,5 м</dd>
+              <dt class="feature-name">Вес палки</dt>
+              <dd class="feature-value">5 кг</dd>
+              <dt class="feature-name">Материал</dt>
+              <dd class="feature-value">Карбон</dd>
+            </dl>
+          </li>
+        </ul>
+
         <ul class="slider-pagination">
           <li class="slider-pagination-item">
             <button class="slider-pagination-button slider-pagination-button-current">
@@ -138,10 +188,26 @@
           </li>
         </ul>
 
-        <h3 class="services-title subtitle">Доставка</h3>
-        <p class="services-text text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        <ul class="services-description-list">
+          <li class="services-description-item">
+            <h3 class="services-title subtitle">Доставка</h3>
+            <p class="services-text text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </li>
 
-        <p class="special-services">Доставим редкий товар под заказ</p>
+          <!-- Дополнительные услуги -->
+
+          <li class="services-description-item">
+            <h3 class="services-title subtitle">Гарантия</h3>
+            <p class="services-text text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+          </li>
+          <li class="services-description-item">
+            <h3 class="services-title subtitle">Кредит</h3>
+            <p class="services-text text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+          </li>
+        </ul>
+
+
+        <button class="special-services-button">Доставим редкий товар под заказ</button>
       </section>
 
       <!-- О компании -->
@@ -185,9 +251,10 @@
         <p class="subscribe-text text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
 
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden">Введите ваш e-mail.
-            <input type="email" name="suscrube-email" placeholder="Ваш e-mail" required>
+          <label for="subcribe-email">
+            <span class="visually-hidden">Введите ваш e-mail.</span>
           </label>
+          <input type="email" id="subcribe-email" name="subcribe-email" placeholder="Ваш e-mail" required>
           <button class="subscribe-button" type="submit">Подписаться</button>
         </form>
 
@@ -231,9 +298,8 @@
         </li>
       </ul>
 
-      <address class="contacts-address">
-        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      </address>
+      <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+
 
       <a class="footer-link-logo" href="https://htmlacademy.ru/">
         <img class="html-academy-logo" src="#" alt="Сайт разработан в HTML Academy.">
