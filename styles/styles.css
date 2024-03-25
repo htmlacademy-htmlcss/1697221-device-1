@@ -33,10 +33,20 @@ body {
 
 .button {
   font-family: "Raleway", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
   color: #000000;
   letter-spacing: 0.2em;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.main-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
 }
 
 /* Главная старница */
@@ -66,7 +76,7 @@ body {
 .pages-navigation {
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 21px;
-  letter-spacing: 0.2em;
+  letter-spacing: 3.6px;
   text-transform: uppercase;
 }
 
@@ -77,13 +87,6 @@ body {
 
 /* Слайдер */
 
-.slider-slogan {
-  font-family: "Raleway", "Arial", sans-serif;
-  font-size: 50px;
-  line-height: 50x;
-  color: #000000;
-}
-
 .slider-number {
   font-size: 180px;
   font-weight: 700;
@@ -93,11 +96,6 @@ body {
 .slider-image {
   display: block;
 }
-
-.main-button {
-  font-size: 18px;
-  line-height: 21px;
-  }
 
 .feature-name {
   font-size: 16px;
@@ -112,9 +110,9 @@ body {
 
 .assortment-link {
   font-family: "Raleway", "Arial", sans-serif;
-  line-height: 18px;
+  font-size: 18px;
   line-height: 24px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.36px;
   color: #000000;
   text-decoration: none;
 }
@@ -126,13 +124,6 @@ body {
   background-color: #000000;
 }
 
-.services-title {
-  font-family: "Raleway", "Arial", sans-serif;
-  font-size: 50px;
-  line-height: 50px;
-  color: #000000;
-}
-
 .special-services-button {
   font-size: 20px;
   line-height: 23px;
@@ -140,28 +131,14 @@ body {
 
 /* О компании */
 
-.about-title {
-  font-family: "Raleway", "Arial", sans-serif;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 50px;
-  color: #000000;
-}
-
 .delivery-list {
   font-weight: 700;
   line-height: 20px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.36px;
   color: #000000;
 }
 
-.contacts-title {
-  font-family: "Raleway", "Arial", sans-serif;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 50px;
-  color: #000000;
-}
+/* Контакты */
 
 .contacts-subtitle {
   font-weight: 700;
@@ -188,17 +165,8 @@ body {
   line-height: inherit;
 }
 
-.subsctibe-title {
-  font-family: "Raleway", "Arial", sans-serif;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 50px;
-  color: #000000;
-}
-
 .subscribe-button {
-  font-size: 18px;
-  line-height: 21px;
+background-color: transparent;
 }
 
 /* Подвал */
@@ -219,14 +187,6 @@ body {
 /* Каталог */
 
 /* Шапка внутренней страницы */
-
-.inner-header-title {
-  font-family: "Raleway", "Arial", sans-serif;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 50px;
-  color: #000000;
-}
 
 .breadcrumds-list {
   font-size: 16px;
@@ -253,7 +213,7 @@ body {
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 16px;
   line-height: 19px;
-  letter-spacing: 0.2em;
+  letter-spacing: 3.6px;
   text-transform: uppercase;
   color:#000000;
 }
@@ -261,7 +221,7 @@ body {
 .filter-group-title {
   font-weight: 700;
   line-height: 20px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.36px;
 }
 
 .control-input-label {
@@ -293,7 +253,7 @@ background-color: #F0F0F0;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.36px;
 }
 
 .products-card-price {
@@ -303,8 +263,7 @@ line-height: 21px;
 .download-more-button {
   font-size: 16px;
   line-height: 19px;
-  letter-spacing: 0.2em;
-  background-color: #FFFFFF;
+  background-color: transparent;
 }
 
 .products-pagination {
