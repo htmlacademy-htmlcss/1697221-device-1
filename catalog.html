@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Device - Моноподы для селфи</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -25,7 +26,7 @@
           <button class="search-button" type="submit">Найти</button>
         </form>
 
-        <ul class="navigation-list user-menu">
+        <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">Коля Петухов</a>
             <a class="navigation-link" href="#"><span class="logout-link">Выйти</span></a>
@@ -38,9 +39,9 @@
           </li>
         </ul>
 
-        <ul class="navigation-list">
+        <ul class="navigation-list pages-navigation">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Каталог</a>
+            <a class="navigation-link" href="#">Каталог товаров</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="index.html#delivery-anchor">Доставка</a>
@@ -59,7 +60,7 @@
 
     <main class="main-inner">
       <header class="inner-header">
-        <h1 class="inner-header-title title">Моноподы для селфи</h1>
+        <h1 class="inner-header-title">Моноподы для селфи</h1>
 
         <ul class="breadcrumds-list">
           <li class="breadcrumbs-item">
@@ -76,11 +77,13 @@
 
       <!-- Основное содержимое -->
 
+      <!-- Блок фильтров -->
+
       <section class="catalog-products">
         <h2 class="visually-hidden">Список товаров с фильтрами</h2>
 
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="post">
-          <p class="catalog-filter-title">Фильтр</p>
+          <p class="catalog-filter-title">Фильтр:</p>
           <fieldset class="catalog-filter-group">
             <legend class="filter-group-title">Цвет</legend>
             <ul class="catalog-filter-list">
@@ -135,8 +138,10 @@
             </ul>
           </fieldset>
 
-          <button class="button" type="submit">Показать</button>
+          <button class="button main-button" type="submit">Показать</button>
         </form>
+
+        <!-- Сортировка результатов -->
 
         <label class="catalog-filter-title">Сортировка
           <select class="select-control" name="sorting">
@@ -153,65 +158,70 @@
           <span class="visually-hidden">По убыванию</span>
         </button>
 
-        <ul class="products-card-list">
-          <li class="products-card">
-            <a class="products-card-link" href="#">
-              <img class="products-card-image" src="images/catalog/amateur-monopod.jpg" width="360" height="380" alt="Любительская селфи-палка.">
-              <h3 class="products-card-title">Любительская селфи-палка</h3>
-            </a>
-            <span class=products-card-price>500 ₽</span>
-          </li>
+        <!-- Карточки товаров -->
 
-          <li class="products-card">
-            <a class="products-card-link" href="#">
-              <img class="products-card-image" src="images/catalog/professional-monopod.jpg" width="360" height="380" alt="Профессиональная селфи-палка.">
-              <h3 class="products-card-title">Профессиональная селфи-палка</h3>
-            </a>
-            <span class=products-card-price>1500 ₽</span>
-          </li>
+        <div class="products-wrapper">
 
-          <li class="products-card">
-            <a class="products-card-link" href="#">
-              <img class="products-card-image" src="images/catalog/unsinkable-monopod.jpg" width="360" height="380" alt="Непотопляемая селфи-палка.">
-              <h3 class="products-card-title">Непотопляемая селфи-палка</h3>
-            </a>
-            <span class=products-card-price>2500 ₽</span>
-          </li>
+          <ul class="products-card-list">
+            <li class="products-card">
+              <a class="products-card-link" href="#">
+                <img class="products-card-image" src="images/catalog/amateur-monopod.jpg" width="360" height="380" alt="Любительская селфи-палка.">
+                <h3 class="products-card-title">Любительская селфи-палка</h3>
+              </a>
+              <span class=products-card-price>500 ₽</span>
+            </li>
 
-          <li class="products-card">
-            <a class="products-card-link" href="#">
-              <img class="products-card-image" src="images/catalog/followme-monopod.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной».">
-              <h3 class="products-card-title">Селфи-палка «Следуй за мной»</h3>
-            </a>
-            <span class=products-card-price>1500 ₽</span>
-          </li>
-        </ul>
+            <li class="products-card">
+              <a class="products-card-link" href="#">
+                <img class="products-card-image" src="images/catalog/professional-monopod.jpg" width="360" height="380" alt="Профессиональная селфи-палка.">
+                <h3 class="products-card-title">Профессиональная селфи-палка</h3>
+              </a>
+              <span class=products-card-price>1 500 ₽</span>
+            </li>
 
-        <button class="button" type="button">Загрузить ещё</button>
+            <li class="products-card">
+              <a class="products-card-link" href="#">
+                <img class="products-card-image" src="images/catalog/unsinkable-monopod.jpg" width="360" height="380" alt="Непотопляемая селфи-палка.">
+                <h3 class="products-card-title">Непотопляемая селфи-палка</h3>
+              </a>
+              <span class=products-card-price>2 500 ₽</span>
+            </li>
 
-        <ul class="products-pagination">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-prev">Назад</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
-          </li>
-          <li class="pagination-item">
-            ...
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">15</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link pagination-next" href="#">Вперёд</a>
-          </li>
-        </ul>
+            <li class="products-card">
+              <a class="products-card-link" href="#">
+                <img class="products-card-image" src="images/catalog/followme-monopod.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной».">
+                <h3 class="products-card-title">Селфи-палка «Следуй за мной»</h3>
+              </a>
+              <span class=products-card-price>1 500 ₽</span>
+            </li>
+          </ul>
+
+          <button class="button download-more-button" type="button">Загрузить ещё</button>
+
+          <ul class="products-pagination">
+            <li class="pagination-item">
+              <a class="button pagination-link pagination-prev">Назад</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link pagination-current">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              ...
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">15</a>
+            </li>
+            <li class="pagination-item">
+              <a class="button pagination-link pagination-next" href="#">Вперёд</a>
+            </li>
+          </ul>
+        </div>
 
       </section>
 
@@ -229,7 +239,7 @@
         <p class="contacts-text text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
       </address>
 
-      <ul class="navigation-list">
+      <ul class="navigation-list pages-navigation">
         <li class="navigation-item">
           <a class="navigation-link" href="index.html#delivery-anchor">Доставка</a>
         </li>

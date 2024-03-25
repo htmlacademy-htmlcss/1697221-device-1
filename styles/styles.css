@@ -1,0 +1,322 @@
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+}
+
+/* Общие элементы */
+
+.button {
+  font-family: "Raleway", "Arial", sans-serif;
+  color: #000000;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Главная старница */
+
+/* Шапка */
+
+.page-header {
+  color: #000000;
+}
+
+.device-logo {
+  display: block;
+}
+
+.search-form input {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.search-button {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.pages-navigation {
+  font-family: "Raleway", "Arial", sans-serif;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.navigation-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Слайдер */
+
+.slider-slogan {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 50px;
+  line-height: 50x;
+  color: #000000;
+}
+
+.slider-number {
+  font-size: 180px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.slider-image {
+  display: block;
+}
+
+.main-button {
+  font-size: 18px;
+  line-height: 21px;
+  }
+
+.feature-name {
+  font-size: 16px;
+}
+
+.feature-value {
+  font-size: 36px;
+  color: #000000;
+}
+
+/* Ассортимент */
+
+.assortment-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  line-height: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Услуги */
+
+.current-services-button {
+  color: #FFE17F;
+  background-color: #000000;
+}
+
+.services-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.special-services-button {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+/* О компании */
+
+.about-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.delivery-list {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.contacts-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.contacts-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.contacts-address {
+  font-style: normal;
+}
+
+.contacts-phone {
+  color: inherit;
+}
+
+/* Рассылка */
+
+.subscribe {
+  background-color: #F0F0F0;
+}
+
+.subscribe input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.subsctibe-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.subscribe-button {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* Подвал */
+
+.page-footer {
+  color: #FFFFFF;
+  background-color: #444444;
+}
+
+.socials-link {
+  color: inherit;
+}
+
+.html-academy-logo {
+  display: block;
+}
+
+/* Каталог */
+
+/* Шапка внутренней страницы */
+
+.inner-header-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.breadcrumds-list {
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.breadcrumbs-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Блок фильтров */
+
+.catalog-products {
+  background-color: #F0F0F0;
+}
+
+.catalog-filter {
+  color: #000000;
+}
+
+.catalog-filter-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:#000000;
+}
+
+.filter-group-title {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.control-input-label {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* Сортировка результатов */
+
+.select-control {
+font-family: "Rubik", "Arial", sans-serif;
+font-size: 18px;
+line-height: 30px;
+background-color: #F0F0F0;
+}
+
+/* Карточки товаров */
+
+.products-wrapper {
+  background-color: #FFFFFF;
+}
+
+.products-card-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.products-card-title {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.products-card-price {
+line-height: 21px;
+}
+
+.download-more-button {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  background-color: #FFFFFF;
+}
+
+.products-pagination {
+  background-color: #EBEBEB;
+}
+
+.pagination-link {
+font-size: 16px;
+line-height: 20px;
+text-decoration: none;
+}
+
+.pagination-prev {
+  color: #444444;
+}
