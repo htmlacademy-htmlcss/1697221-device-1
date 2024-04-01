@@ -263,6 +263,12 @@ body {
   align-items: flex-start;
 }
 
+.subscribe-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .subscribe {
   background-color: #F0F0F0;
 }
@@ -354,6 +360,10 @@ body {
   text-decoration: none;
 }
 
+.inner-wrapper {
+  display: flex;
+}
+
 /* Блок фильтров */
 
 .catalog-products {
@@ -362,6 +372,7 @@ body {
 
 .catalog-filter {
   color: #000000;
+  width: 320px;
 }
 
 .catalog-filter-title {
@@ -382,6 +393,10 @@ body {
 .control-input-label {
   font-size: 16px;
   line-height: 20px;
+}
+
+.sorting-and-results {
+  width: 840px;
 }
 
 /* Сортировка результатов */
