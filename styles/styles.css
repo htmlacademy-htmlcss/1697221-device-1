@@ -295,7 +295,7 @@ body {
   background-color: transparent;
 }
 
-.subscribe-form + .subscribe-text {
+.subscribe-form-wrapper .subscribe-text {
   width: 180px;
 }
 
