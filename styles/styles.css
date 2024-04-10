@@ -191,8 +191,7 @@ body {
 /* Слайдер */
 
 .slider {
-  padding-bottom: 40px;
-  margin-bottom: 30px;
+  padding-bottom: 70px;
 }
 
 .slider-list {
@@ -207,6 +206,8 @@ body {
 
 .slider-image {
   display: block;
+  max-width: 560px;
+  height: auto;
 }
 
 .prev-button, .next-button {
@@ -264,7 +265,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 70px;
   padding: 0;
   list-style-type: none;
 }
@@ -297,7 +297,7 @@ body {
 
 .services-column-wrapper {
   display: flex;
-  padding-bottom: 72px;
+  padding: 70px 0;
   margin-bottom: 70px;
 }
 
@@ -307,6 +307,10 @@ body {
   padding: 0;
   padding-top: 64px;
   list-style-type: none;
+}
+
+.services-item {
+  margin-bottom: 35px;
 }
 
 .current-services-button {
@@ -339,6 +343,7 @@ body {
 .index-column-wrapper {
   display: flex;
   justify-content: space-between;
+  padding: 47px 0 70px;
 }
 
 /* О компании */
@@ -347,11 +352,28 @@ body {
   width: 520px;
 }
 
+.about-title {
+  margin-bottom: 48px;
+}
+
+.about-text {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
 .delivery-list {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style-type: none;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #000000;
+}
+
+.delivery-item:not(:last-child) {
+  margin-bottom: 19px;
 }
 
 /* Контакты */
@@ -360,29 +382,54 @@ body {
   width: 532px;
 }
 
+.contacts-title {
+  margin-bottom: 48px;
+}
+
+.contacts-text {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
 .contacts-subtitle {
+  margin: 0;
+  margin-bottom: 15px;
   font-weight: 700;
   font-size: 24px;
 }
 
 .contacts-address {
   font-style: normal;
+  margin-bottom: 30px;
+}
+
+.contacts-address .contacts-text {
+  margin: 0;
 }
 
 .contacts-phone {
   color: inherit;
 }
 
+.contacts-schedule-list {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style-type: none;
+}
+
 /* Рассылка */
 
 .subscribe {
   background-color: #F0F0F0;
+  padding: 64px 0 56px;
 }
 
 .subscribe-columns-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 144px;
 }
 
 .subscribe-form-wrapper {
@@ -420,12 +467,21 @@ body {
 /* Подвал */
 
 .page-footer {
+  padding: 62px 0 61px;
   color: #FFFFFF;
   background-color: #444444;
 }
 
+.footer-link-logo {
+  margin-bottom: 35px;
+}
+
 .footer-column-wrapper {
   display: flex;
+}
+
+.address-navigation-wrapper {
+  margin-bottom: 47px;
 }
 
 .page-footer .contacts-address {
