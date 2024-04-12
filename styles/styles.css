@@ -629,11 +629,14 @@ margin-left: 35px;
   text-transform: uppercase;
   color: #000000;
   margin: 0;
-  margin-bottom: 60px
+}
+
+.catalog-filter .catalog-filter-title {
+margin-bottom: 60px
 }
 
 .catalog-filter-group {
- padding-top: 12px;
+ padding: 0;
  margin-bottom: 35px;
 }
 
@@ -660,19 +663,30 @@ margin-left: 35px;
 }
 
 .filter-button {
-max-width: 220px;
+min-width: 220px;
 }
-
 
 /* Сортировка результатов */
 
 .sorting-and-results {
   width: 840px;
-  padding: 25px 40px;
+}
+
+.sorting-line {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.sorting-line .catalog-filter-title {
+  max-width: 200px;
+  margin-right: 153px;
 }
 
 .select-control {
   font-family: "Rubik", "Arial", sans-serif;
+  max-width: 150px;
+  margin-right: auto;
   font-size: 18px;
   line-height: 30px;
   background-color: #F0F0F0;
@@ -685,9 +699,39 @@ max-width: 220px;
   padding: 70px 40px 78px;
 }
 
+.products-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.products-card {
+  width: 360px;
+  margin-right: 40px;
+  margin-bottom: 44px;
+}
+
+.products-card:nth-child(2n) {
+  margin-right: 0;
+}
+
 .products-card-link {
   text-decoration: none;
   color: #000000;
+}
+
+.products-card-image {
+display: block;
+width: 360px;
+height: auto;
+margin-bottom: 32px;
+}
+
+.title-price-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .products-card-title {
@@ -695,6 +739,8 @@ max-width: 220px;
   line-height: 20px;
   font-weight: 700;
   letter-spacing: -0.02em;
+  max-width: 240px;
+  margin: 0;
 }
 
 .products-card-price {
@@ -702,21 +748,50 @@ max-width: 220px;
 }
 
 .download-more-button {
+  width: 100%;
+  margin-bottom: 44px;
+  padding: 18px;
   font-size: 16px;
   line-height: 19px;
   background-color: transparent;
 }
 
 .products-pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  list-style-type: none;
   background-color: #EBEBEB;
 }
 
+.pagination-item {
+  min-width: 40px;
+  min-height: 40px;
+  text-align: center;
+}
+
+.pagination-item:first-child {
+  margin-right: auto;
+}
+
+.pagination-item:last-child {
+  margin-left: auto;
+}
+
 .pagination-link {
+  display: block;
+  padding: 10px;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
 }
 
 .pagination-prev {
+  padding: 25px;
   color: #444444;
+}
+
+.pagination-next {
+  padding: 25px;
 }
