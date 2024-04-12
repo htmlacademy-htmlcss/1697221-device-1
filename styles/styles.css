@@ -375,6 +375,7 @@ body {
 
 .about {
   width: 520px;
+  padding-right: 15px;
 }
 
 .about-title {
@@ -409,6 +410,7 @@ body {
 
 .contacts {
   width: 532px;
+  padding-right: 15px;
 }
 
 .contacts-title {
