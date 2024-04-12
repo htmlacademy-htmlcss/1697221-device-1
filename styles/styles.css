@@ -565,8 +565,8 @@ margin-left: 35px;
   display: block;
   min-width: 40px;
   min-height: 40px;
+  padding: 10px;
   color: inherit;
-  background-color: #FFE17F;
 }
 
 .html-academy-logo {
