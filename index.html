@@ -28,21 +28,21 @@
           </form>
 
           <ul class="navigation-list">
-            <li class="navigation-item">
+            <li class="navigation-item login-item">
               <a class="navigation-link" href="#">Войти</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item compare-item">
               <a class="navigation-link" href="#">Сравнить</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item cart-item">
               <a class="navigation-link" href="#"><span class="chosen-products">2</span>Корзина</a>
             </li>
           </ul>
         </div>
 
         <ul class="navigation-list pages-navigation">
-          <li class="navigation-item">
-            <a class="navigation-link navigation-catalog" href="#">Каталог товаров</a>
+          <li class="navigation-item navigation-catalog">
+            <a class="navigation-link navigation-catalog-link" href="#">Каталог товаров</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#delivery-anchor">Доставка</a>
@@ -79,9 +79,9 @@
                 </button>
               </div>
               <div class="slider-description-wrapper">
-                <p class="main-title">Порхает как бабочка, жалит как пчела!</p>
+                <p class="main-title slider-title">Порхает как бабочка, жалит как пчела!</p>
                 <p class="slider-text text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                <a class="button main-button" href="#">Подробнее</a>
+                <a class="button main-button slider-info-button" href="#">Подробнее</a>
                 <dl class="feature-table">
                   <dt class="feature-name">Дальность полета</dt>
                   <dd class="feature-value">800 м</dd>
@@ -108,9 +108,9 @@
                 </button>
               </div>
               <div class="slider-description-wrapper">
-                <p class="main-title">Худеем правильно!</p>
+                <p class="main-title slider-title">Худеем правильно!</p>
                 <p class="slider-text text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-                <a class="button main-button" href="#">Подробнее</a>
+                <a class="button main-button slider-info-button" href="#">Подробнее</a>
                 <dl class="feature-table">
                   <dt class="feature-name">Без подзарядки</dt>
                   <dd class="feature-value">48 часов</dd>
@@ -133,9 +133,9 @@
                 </button>
               </div>
               <div class="slider-description-wrapper">
-                <p class="main-title">Делай селфи, как Бен Стиллер! </p>
+                <p class="main-title slider-title">Делай селфи, как Бен Стиллер! </p>
                 <p class="slider-text text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-                <a class="button main-button" href="#">Подробнее</a>
+                <a class="button main-button slider-info-button" href="#">Подробнее</a>
                 <dl class="feature-table">
                   <dt class="feature-name">Длина палки</dt>
                   <dd class="feature-value">8,5 м</dd>
@@ -202,44 +202,53 @@
           <div class="services-column-wrapper">
             <ul class="services-list">
               <li class="services-item">
-                <button class="button current-services-button" type="button">Доставка</button>
+                <button class="button main-button services-button current-services-button" type="button">Доставка</button>
               </li>
               <li class="services-item">
-                <button class="button services-button" type="button">Гарантия</button>
+                <button class="button main-button services-button" type="button">Гарантия</button>
               </li>
               <li class="services-item">
-                <button class="button services-button" type="button">Кредит</button>
+                <button class="button main-button services-button" type="button">Кредит</button>
               </li>
             </ul>
 
             <ul class="services-description-list">
               <li class="services-description-item services-delivery">
-                <h3 class="main-title" id="delivery-anchor">Доставка</h3>
-                <p class="services-text text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                <div class="services-description-wrapper">
+                  <h3 class="main-title services-title" id="delivery-anchor">Доставка</h3>
+                  <p class="services-text text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                </div>
               </li>
 
               <!-- Дополнительные услуги -->
 
-              <li class="services-description-item">
-                <h3 class="main-title" id="guarantee-anchor">Гарантия</h3>
-                <p class="services-text text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+              <li class="services-description-item services-guarantee">
+                <div class="services-description-wrapper">
+                  <h3 class="main-title services-title" id="guarantee-anchor">Гарантия</h3>
+                  <p class="services-text text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                </div>
               </li>
-              <li class="services-description-item">
-                <h3 class="main-title">Кредит</h3>
-                <p class="services-text text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+              <li class="services-description-item services-credit">
+                <div class="services-description-wrapper">
+                  <h3 class="main-title services-title" id="credit-anchor">Кредит</h3>
+                  <p class="services-text text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+                </div>
               </li>
             </ul>
           </div>
         </div>
-        <button class="button special-services-button">Доставим редкий товар под заказ</button>
+
+        <div class="page-container">
+          <button class="button special-services-button">Доставим редкий товар под заказ</button>
+        </div>
       </section>
 
       <!-- О компании -->
 
       <div class="page-container">
-        <div class="index-column-wrapper">
+        <div class="about-contacts-wrapper">
           <section class="about">
-            <h2 class="main-title">О нас</h2>
+            <h2 class="main-title about-title">О нас</h2>
             <p class="about-text text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
             <p class="about-text text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
             <ul class="delivery-list">
@@ -247,18 +256,18 @@
               <li class="delivery-item">СДИК</li>
               <li class="delivery-item">ТоксБерри</li>
             </ul>
-            <a class="button main-button" href="#">Подробнее о нас</a>
+            <a class="button main-button about-button" href="#">Подробнее о нас</a>
           </section>
 
           <!-- Контакты -->
 
           <section class="contacts" id="contacts-anchor">
-            <h2 class="main-title">Контакты</h2>
+            <h2 class="main-title contacts-title">Контакты</h2>
             <p class="contacts-text text">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки. </p>
 
             <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
             <address class="contacts-address">
-              <p class="contacts-text text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+              <p class="contacts-text text">Санкт-Петербург, набережная реки Карповки, 5, литера&nbspП.</p>
               <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
             </address>
 
@@ -267,7 +276,7 @@
               <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
               <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
             </ul>
-            <a class="button main-button" href="#">Напишите нам</a>
+            <a class="button main-button contacts-button" href="#">Напишите нам</a>
           </section>
         </div>
       </div>
@@ -306,7 +315,7 @@
           <img class="device-logo" src="images/logo-device.svg" width="145" height="36" alt="Логотип Device, перейти на главную страницу сайта.">
         </a>
 
-        <div class="footer-column-wrapper">
+        <div class="address-navigation-wrapper">
           <address class="contacts-address">
             <p class="contacts-text text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           </address>
@@ -326,7 +335,7 @@
           <a class="contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
         </div>
 
-        <div class="footer-column-wrapper">
+        <div class="socials-academy-wrapper">
           <ul class="socials-list">
             <li class="socials-item">
               <a class="socials-link" href="https://t.me/htmlacademy"><span class="visually-hidden">Мы в Телеграм.</span></a>
