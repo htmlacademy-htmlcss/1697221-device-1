@@ -232,7 +232,7 @@ body {
 .slider-image {
   display: block;
   max-width: 560px;
-  max-height: 560px;
+  height: 100%;
 }
 
 .prev-button,
@@ -289,7 +289,8 @@ body {
 
 .feature-name {
   font-size: 16px;
-  order: 2;
+  order: 1;
+  margin: 0;
 }
 
 .feature-value {
