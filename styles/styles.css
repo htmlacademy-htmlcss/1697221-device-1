@@ -35,7 +35,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 18px;
@@ -123,7 +123,6 @@ body {
 .search-form {
   display: flex;
   width: 517px;
-
 }
 
 .search-form input {
@@ -269,18 +268,19 @@ body {
   color: #ffffff;
 }
 
-.feature-table {
+.feature-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
 }
 
-.quadcopter-item .feature-table {
+.feature-list {
   gap: 10px 20px;
 }
 
-.monopod-item .feature-table {
+.monopod-item .feature-list {
   gap: 10px 40px;
 }
 
@@ -584,6 +584,7 @@ body {
   grid-row: 2/3;
   gap: 10px 35px;
   justify-self: center;
+  justify-content: center;
 }
 
 .page-footer .contacts-phone {
@@ -596,6 +597,7 @@ body {
 .socials-list {
   display: flex;
   justify-content: center;
+  justify-self: center;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -603,11 +605,9 @@ body {
   list-style-type: none;
   grid-row: 3/4;
   grid-column: 2/3;
+  gap: 15px;
 }
 
-.socials-item:not(:last-child) {
-  margin-right: 15px;
-}
 
 .socials-link {
   display: block;
@@ -621,7 +621,7 @@ body {
   grid-row: 3/4;
   grid-column: 3/4;
   justify-self: end;
-  align-self: end;
+  align-self: canter;
 }
 
 .html-academy-logo {
