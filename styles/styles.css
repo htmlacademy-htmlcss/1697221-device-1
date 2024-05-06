@@ -226,6 +226,7 @@ body {
 .slider-column-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .slider-image {
@@ -569,11 +570,6 @@ body {
   align-items: center;
 }
 
-.footer-device-logo-link {
-  display: block;
-  height: 36px;
-}
-
 .page-footer .contacts-address {
   font-size: 16px;
   line-height: 20px;
@@ -621,12 +617,11 @@ body {
   grid-row: 3/4;
   grid-column: 3/4;
   justify-self: end;
-  align-self: canter;
+  align-self: center;
 }
 
 .html-academy-logo {
   display: block;
-  Width: 115px;
 }
 
 /* Каталог */
