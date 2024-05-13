@@ -67,6 +67,7 @@ body {
 /* Общие элементы */
 
 .button {
+  display: inline-block;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -75,10 +76,11 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
+  border: none;
+  cursor: pointer;
 }
 
 .main-button {
-  display: block;
   padding: 10px;
 }
 
@@ -157,21 +159,36 @@ body {
 .login-item {
   flex-basis: 230px;
   margin-right: auto;
-  padding-left: 27px;
   display: flex;
   align-items: center;
+}
+
+.login-link {
+  padding-left: 27px;
+  background-image: url("../images/icons/login.svg");
+  background-repeat: no-repeat;
+  background-size: 15px 12px;
+  background-position: left center;
 }
 
 .login-name {
   margin-right: 28px;
 }
 
-.compare-item .navigation-link {
+.compare-link {
   padding-left: 22px;
+  background-image: url("../images/icons/sort.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 12px;
+  background-position: left center;
 }
 
-.cart-item .navigation-link {
+.cart-link {
   padding-left: 43px;
+  background-image: url("../images/icons/cart.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 14px;
+  background-position: 28px center;
 }
 
 .navigation-item:not(:first-child) {
@@ -196,9 +213,9 @@ body {
   gap: 20px 45px;
 }
 
-.navigation-catalog {
-  margin-right: auto;
-  min-width: 293px;
+.pages-navigation-item .navigation-link {
+  padding-top: 15px;
+  padding-bottom: 14px;
 }
 
 .navigation-link {
@@ -209,13 +226,58 @@ body {
   padding-bottom: 5px;
 }
 
-.pages-navigation-item .navigation-link {
-  padding-top: 15px;
-  padding-bottom: 14px;
+.navigation-link:hover {
+  opacity: 60%;
 }
 
-.navigation-catalog-link {
-  padding: 15px 57px 15px 0;
+.navigation-link:active {
+  opacity: 30%;
+}
+
+.navigation-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.navigation-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.navigation-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.navigation-catalog {
+  margin-right: auto;
+  min-width: 293px;
+}
+
+.pages-navigation-item .navigation-catalog-link {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-catalog-link::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  background-image: url("../images/icons/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
+  margin-left: 20px;
+  opacity: 30%;
+}
+
+.navigation-catalog-link:hover,
+.navigation-catalog-link:hover::after,
+.navigation-catalog-link:active,
+.navigation-catalog-link:active::after {
+  opacity: 100%;
 }
 
 /* Слайдер */
@@ -239,7 +301,6 @@ body {
 .slider-image {
   display: block;
   max-width: 560px;
-  height: auto;
   object-fit: contain;
 }
 
@@ -325,7 +386,7 @@ body {
 .assortment-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px 40px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -333,7 +394,7 @@ body {
 
 .assortment-item {
   width: 160px;
-  padding-bottom: 12px;
+  display: flex;
 }
 
 .assortment-item:nth-child(6n) {
@@ -348,6 +409,84 @@ body {
   letter-spacing: -0.02em;
   color: #000000;
   text-decoration: none;
+  padding-bottom: 12px;
+  flex-grow: 1;
+}
+
+.assortment-link::before {
+  content: "";
+  display: block;
+  height: 160px;
+  margin-bottom: 32px;
+  background-color: #FFE17F;
+}
+
+.vr::before {
+  content: "";
+  background-image: url("../images/category/vr.svg");
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+  background-position: center center;
+}
+
+.monopods::before {
+  content: "";
+  background-image: url("../images/category/monopods.svg");
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+  background-position: center center;
+}
+
+.action-cameras::before {
+  content: "";
+  background-image: url("../images/category/action-cameras.svg");
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+  background-position: center center;
+}
+
+.fitness-bracelets::before {
+  content: "";
+  background-image: url("../images/category/fitness-bracelets.svg");
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+  background-position: center center;
+  }
+
+.smart-watches::before {
+  content: "";
+  background-image: url("../images/category/smart-watches.svg");
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+  background-position: center center;
+}
+
+.quadcopters::before {
+  content: "";
+  background-image: url("../images/category/quadcopters.svg");
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+  background-position: center center;
+}
+
+.assortment-link:hover::before {
+  background-color: #FFC700;
+}
+
+.assortment-link:active {
+opacity: 30%;
+}
+
+.assortment-link:focus {
+ outline: 2px solid #AF4FFF;
+}
+
+.assortment-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.assortment-link:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 /* Услуги */
@@ -406,12 +545,40 @@ body {
 }
 
 .special-services-button {
-  display: block;
+  width: 100%;
+  position: relative;
   font-size: 20px;
   line-height: 23px;
-  padding: 40px 125px;
-  margin: 0 auto;
+  padding: 39px 125px;
+  background-color: #F0F0F0;
 }
+
+.special-services-button::before {
+  content: "";
+  position: absolute;
+  width: 125px;
+  height: 100px;
+  background-color: #FFE17F;
+  left:0;
+  top:0;
+  background-image: url("../images/special-delivery.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 47px 32px;
+}
+
+/* .special-services-button::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(220, 220, 220, 0.5);
+  background-image: url("../images/icons/info.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 4px 12px;
+} */
 
 /* Обертка для создания колонок */
 
@@ -788,7 +955,6 @@ body {
 .products-card-image {
   display: block;
   max-width: 360px;
-  height: auto;
   object-fit: contain;
 }
 
