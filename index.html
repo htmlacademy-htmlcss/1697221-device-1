@@ -22,20 +22,21 @@
             <label for="search-field">
               <span class="visually-hidden">Введите запрос.</span>
             </label>
-            <input type="search" id="search-field" name="search-field" placeholder="Поиск по сайту">
+            <input class="field" type="search" id="search-field" name="search-field" placeholder="Поиск по сайту">
 
-            <button class="search-button" type="submit">Найти</button>
+            <button class="button search-button" type="submit">Найти</button>
           </form>
 
           <ul class="navigation-list">
             <li class="navigation-item login-item">
               <a class="navigation-link login-link" href="#">Войти</a>
             </li>
-            <li class="navigation-item compare-item">
+            <li class="navigation-item">
               <a class="navigation-link compare-link" href="#">Сравнить</a>
             </li>
-            <li class="navigation-item cart-item">
-              <a class="navigation-link cart-link" href="#"><span class="chosen-products">2</span>Корзина</a>
+            <li class="navigation-item">
+              <a class="navigation-link cart-link" href="#">
+                <span class="chosen-products">2</span>Корзина</a>
             </li>
           </ul>
         </div>
@@ -48,10 +49,10 @@
           <li class="pages-navigation-item">
             <a class="navigation-link" href="#delivery-anchor">Доставка</a>
           </li>
-          <li class="pages-navigation">
+          <li class="pages-navigation-item">
             <a class="navigation-link" href="#guarantee-anchor">Гарантия</a>
           </li>
-          <li class="pages-navigation">
+          <li class="pages-navigation-item">
             <a class="navigation-link" href="#contacts-anchor">Контакты</a>
           </li>
         </ul>
@@ -70,14 +71,16 @@
             <h3 class="visually-hidden">Квадрокоптер с мощным лазером</h3>
             <span class="slider-number">01</span>
             <div class="slider-column-wrapper">
-              <img class="slider-image" src="images/slider/slider-quadcopter.png" width="560" height="560" alt="Квадрокоптер.">
-              <div class="slider-image-buttons">
-                <button class="slider-button prev-button" type="button">
-                  <span class="visually-hidden">Предыдущее фото.</span>
-                </button>
-                <button class="slider-button next-button" type="button">
-                  <span class="visually-hidden">Следующее фото.</span>
-                </button>
+              <div class="slider-image-gallery">
+                <img class="slider-image" src="images/slider/slider-quadcopter.png" width="560" height="560" alt="Квадрокоптер.">
+                <div class="slider-image-buttons">
+                  <button class="button slider-button prev-button" type="button">
+                    <span class="visually-hidden">Предыдущее фото.</span>
+                  </button>
+                  <button class="button slider-button next-button" type="button">
+                    <span class="visually-hidden">Следующее фото.</span>
+                  </button>
+                </div>
               </div>
               <div class="slider-description-wrapper">
                 <p class="main-title slider-title">Порхает как бабочка, жалит как пчела!</p>
@@ -103,14 +106,16 @@
             <h3 class="visually-hidden">Мотивирующий фитнес-браслет</h3>
             <span class="slider-number">02</span>
             <div class="slider-column-wrapper">
-              <img class="slider-image" src="images/slider/slider-bracelet.png" width="560" height="560" alt="Фитнес-браслет.">
-              <div class="slider-image-buttons">
-                <button class="slider-button prev-button" type="button">
-                  <span class="visually-hidden">Предыдущее фото.</span>
-                </button>
-                <button class="slider-button next-button" type="button">
-                  <span class="visually-hidden">Следующее фото.</span>
-                </button>
+              <div class="slider-image-gallery">
+                <img class="slider-image" src="images/slider/slider-bracelet.png" width="560" height="560" alt="Фитнес-браслет.">
+                <div class="slider-image-buttons">
+                  <button class="button slider-button prev-button" type="button">
+                    <span class="visually-hidden">Предыдущее фото.</span>
+                  </button>
+                  <button class="button slider-button next-button" type="button">
+                    <span class="visually-hidden">Следующее фото.</span>
+                  </button>
+                </div>
               </div>
               <div class="slider-description-wrapper">
                 <p class="main-title slider-title">Худеем правильно!</p>
@@ -130,14 +135,16 @@
             <h3 class="visually-hidden">Самый длинный монопод</h3>
             <span class="slider-number">03</span>
             <div class="slider-column-wrapper">
-              <img class="slider-image" src="images/slider/slider-monopod.png" width="560" height="560" alt="Монопод.">
-              <div class="slider-image-buttons">
-                <button class="slider-button prev-button" type="button">
-                  <span class="visually-hidden">Предыдущее фото.</span>
-                </button>
-                <button class="slider-button next-button" type="button">
-                  <span class="visually-hidden">Следующее фото.</span>
-                </button>
+              <div class="slider-image-gallery">
+                <img class="slider-image" src="images/slider/slider-monopod.png" width="560" height="560" alt="Монопод.">
+                <div class="slider-image-buttons">
+                  <button class="button slider-button prev-button" type="button">
+                    <span class="visually-hidden">Предыдущее фото.</span>
+                  </button>
+                  <button class="button slider-button next-button" type="button">
+                    <span class="visually-hidden">Следующее фото.</span>
+                  </button>
+                </div>
               </div>
               <div class="slider-description-wrapper">
                 <p class="main-title slider-title">Делай селфи, как Бен Стиллер! </p>
@@ -310,7 +317,7 @@
               <label for="subcribe-email">
                 <span class="visually-hidden">Введите ваш e-mail.</span>
               </label>
-              <input type="email" id="subcribe-email" name="subcribe-email" placeholder="Ваш e-mail" required>
+              <input class="field" type="email" id="subcribe-email" name="subcribe-email" placeholder="Ваш e-mail" required>
               <button class="button subscribe-button" type="submit">Подписаться</button>
             </div>
             <p class="subscribe-form-text">Это бесплатно</p>

@@ -66,6 +66,24 @@ body {
 
 /* Общие элементы */
 
+.field:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.field:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.field:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.field:disabled {
+  opacity: 0.3;
+}
+
 .button {
   display: inline-block;
   font-family: "Raleway", "Arial", sans-serif;
@@ -78,6 +96,24 @@ body {
   text-align: center;
   border: none;
   cursor: pointer;
+}
+
+.button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  opacity: 0.3;
 }
 
 .main-button {
@@ -99,7 +135,7 @@ body {
 .page-header {
   color: #000000;
   padding: 20px 60px 94px;
-  background-color: #FFE17F;
+  background: linear-gradient(#FFFFFF 40px, #FFE17F 40px)
 }
 
 .navigation {
@@ -109,6 +145,28 @@ body {
 
 .navigation-link-logo {
   margin-bottom: 30px;
+}
+
+.navigation-link-logo:hover {
+  opacity: 0.6;
+}
+
+.navigation-link-logo:active {
+  opacity: 0.3;
+}
+
+.navigation-link-logo:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.navigation-link-logo:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.navigation-link-logo:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .device-logo {
@@ -127,13 +185,25 @@ body {
   width: 517px;
 }
 
-.search-form input {
+.search-form .field {
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   flex-grow: 1;
   padding-left: 48px;
   background-color: transparent;
+  border-radius: 50px 0 0 50px;
+  border: 2px solid #000000;
+  border-right: 1px solid #000000;;
+  padding-left: 48px;
+  background-image: url("../images/icons/search.svg");
+  background-size: 16px 16px;
+  background-position: 16px 50%;
+  background-repeat: no-repeat;
+}
+
+.search-form .field:placeholder-shown {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .search-button {
@@ -143,6 +213,19 @@ body {
   padding: 10px;
   width: 160px;
   background-color: transparent;
+  border-radius: 0 50px 50px 0;
+  border: 2px solid #000000;
+  border-left: 1px solid #000000;
+}
+
+.search-button:hover {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #000000;
 }
 
 .navigation-list {
@@ -184,11 +267,26 @@ body {
 }
 
 .cart-link {
+  position: relative;
   padding-left: 43px;
   background-image: url("../images/icons/cart.svg");
   background-repeat: no-repeat;
   background-size: 16px 14px;
-  background-position: 28px center;
+  background-position: 15px center;
+}
+
+.chosen-products {
+  position: absolute;
+  font-size: 14px;
+  line-height: 16px;
+  min-width: 21px;
+  padding: 3px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  text-align: center;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .navigation-item:not(:first-child) {
@@ -227,11 +325,11 @@ body {
 }
 
 .navigation-link:hover {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .navigation-link:active {
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .navigation-link:focus {
@@ -270,14 +368,14 @@ body {
   background-position: center center;
   background-size: 16px 16px;
   margin-left: 20px;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .navigation-catalog-link:hover,
 .navigation-catalog-link:hover::after,
 .navigation-catalog-link:active,
 .navigation-catalog-link:active::after {
-  opacity: 100%;
+  opacity: 1;
 }
 
 /* Слайдер */
@@ -298,17 +396,55 @@ body {
   align-items: flex-start;
 }
 
+.slider-image-gallery {
+  position: relative;
+  width: 560px;
+}
+
 .slider-image {
   display: block;
   max-width: 560px;
   object-fit: contain;
 }
 
-.prev-button,
-.next-button {
-  display: none;
+.slider-image-buttons {
+  position: absolute;
+  width: 530px;
+  display: flex;
+  justify-content: space-between;
+  top: 211px;
+  right: 0;
+  /* z-index: 1; */
+}
+
+.slider-button {
+  background-color: transparent;
   min-width: 20px;
   min-height: 60px;
+  background-repeat: no-repeat;
+  background-size: 20px 60px;
+  border: none;
+}
+
+.slider-button:hover {
+  opacity: 0.6;
+}
+
+.slider-button:active {
+  opacity: 0.3;
+}
+
+.slider-button:disabled {
+  opacity: 0.1;
+}
+
+.prev-button {
+  background-image: url(../images/slider/slider-button.svg);
+}
+
+.next-button {
+  background-image: url(../images/slider/slider-button.svg);
+  transform: rotate(180deg);
 }
 
 .slider-description-wrapper {
@@ -382,6 +518,10 @@ body {
 }
 
 /* Ассортимент */
+
+.assortment {
+  margin-bottom: 70px;
+}
 
 .assortment-list {
   display: flex;
@@ -474,11 +614,12 @@ body {
 }
 
 .assortment-link:active {
-opacity: 30%;
+opacity: 0.3;
 }
 
 .assortment-link:focus {
  outline: 2px solid #AF4FFF;
+ offset: 2px;
 }
 
 .assortment-link:focus:not(:focus-visible) {
@@ -487,17 +628,20 @@ opacity: 30%;
 
 .assortment-link:focus-visible {
   outline: 2px solid #AF4FFF;
+  offset: 2px;
 }
 
 /* Услуги */
 
 .services {
+  padding-bottom: 72px;
   margin-bottom: 70px;
+  background: linear-gradient(#FFFFFF 102px, #F0F0F0 102px);
+
 }
 
 .services-column-wrapper {
   display: flex;
-  padding: 70px 0;
   margin-bottom: 70px;
 }
 
@@ -544,6 +688,27 @@ opacity: 30%;
   margin: 0;
 }
 
+.services-delivery {
+  background-image: url(../images/services/delivery.svg);
+  background-size: 136px 165px;
+  background-repeat: no-repeat;
+  background-position: 674px 50%;
+}
+
+.services-guarantee {
+  background-image: url(../images/services/quarantee.svg);
+  background-size: 171px 195px;
+  background-repeat: no-repeat;
+  background-position: 674px 50%;
+}
+
+.services-credit {
+  background-image: url(../images/services/credit.svg);
+  background-size: 156px 188px;
+  background-repeat: no-repeat;
+  background-position: 689px 50%;
+}
+
 .special-services-button {
   width: 100%;
   position: relative;
@@ -557,42 +722,62 @@ opacity: 30%;
   content: "";
   position: absolute;
   width: 125px;
-  height: 100px;
   background-color: #FFE17F;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
+  bottom: 0;
   background-image: url("../images/special-delivery.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 47px 32px;
 }
 
-/* .special-services-button::after {
+.special-services-button::after {
   content: "";
   position: absolute;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(220, 220, 220, 0.5);
+  background-color: rgba(220, 220, 220, 0.8);
   background-image: url("../images/icons/info.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 4px 12px;
-} */
+  opacity: 0.3;
+  right: 42px;
+  top: 50%;
+  transform: translateY(-50%);}
+
+
+.special-services-button:hover::after {
+  opacity: 1;
+  background-color: rgba(220, 220, 220, 0.5);
+}
 
 /* Обертка для создания колонок */
 
 .about-contacts-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 47px 0 70px;
+
 }
 
 /* О компании */
 
 .about {
+  position: relative;
   width: 520px;
   padding-right: 15px;
+  padding: 47px 0 70px;
+}
+
+.about::before {
+  position: absolute;
+  content: "";
+  width: 84px;
+  height: 7px;
+  background-color: #000000;
+  top: 0;
 }
 
 .about-title {
@@ -626,8 +811,19 @@ opacity: 30%;
 /* Контакты */
 
 .contacts {
+  position: relative;
   width: 532px;
   padding-right: 15px;
+  padding: 47px 0 70px;
+}
+
+.contacts::before {
+  position: absolute;
+  content: "";
+  width: 84px;
+  height: 7px;
+  background-color: #000000;
+  top: 0;
 }
 
 .contacts-title {
@@ -708,25 +904,39 @@ opacity: 30%;
   display: flex;
 }
 
-.subscribe input {
+.subscribe .field {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   flex-grow: 1;
   padding-left: 16px;
   background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
+}
+
+.subscribe .field:placeholder-shown {
+  color: #444444;
+  opacity: 0.5;
 }
 
 .subscribe-button {
   background-color: transparent;
   padding: 18px 39px;
+  border: 3px solid #C4C4C4;
 }
 
 .subscribe-form-text {
   max-width: 300px;
   margin: 0;
+  padding-left: 32px;
   text-align: end;
+  background-image: url("../images/subscribe-mark.svg");
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
 }
+
 
 /* Подвал */
 
