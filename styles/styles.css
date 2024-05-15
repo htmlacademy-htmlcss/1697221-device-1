@@ -411,7 +411,7 @@ background-color: transparent;
 }
 
 .main-index {
-  margin-top: -36px;
+margin:-190px;
 }
 
 
@@ -429,7 +429,8 @@ background-color: transparent;
 
 .slider-item {
   position: relative;
-  background: linear-gradient(#FFE17F 150px, #FFFFFF 150px);
+  padding-top: 190px;
+  background: linear-gradient( #FFFFFF 40px, #FFE17F 40px, #FFE17F 340px, #FFFFFF 340px);
 }
 
 .slider-column-wrapper {
@@ -513,10 +514,10 @@ background-color: transparent;
 
 .slider-number {
   position: absolute;
-  top: 6px;
+  top: 219px;
   right: 49px;
   font-size: 180px;
-  line-height: 180px;
+  line-height: 135px;
   font-weight: 700;
   color: #ffffff;
   z-index: 2;
