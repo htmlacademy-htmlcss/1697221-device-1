@@ -232,7 +232,7 @@ body {
   width: 517px;
 }
 
-.search-form .field {
+.search-field {
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -593,8 +593,17 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
+  gap: 20px;
   justify-content: center;
+  align-items: center;
   margin-top: 26px;
+}
+
+.slider-pagination-button {
+  display: block;
+  width: 12px;
+  height: 12px;
+  /* border-radius: 50%; */
 }
 
 /* Ассортимент */
@@ -639,52 +648,38 @@ body {
   height: 160px;
   margin-bottom: 32px;
   background-color: #FFE17F;
+  background-size: 160px 160px;
+  background-position: center center;
 }
 
 .vr::before {
   content: "";
   background-image: url("../images/category/vr.svg");
-
 }
 
 .monopods::before {
   content: "";
   background-image: url("../images/category/monopods.svg");
-  background-repeat: no-repeat;
-  background-size: 160px 160px;
-  background-position: center center;
 }
 
 .action-cameras::before {
   content: "";
   background-image: url("../images/category/action-cameras.svg");
-  background-repeat: no-repeat;
-  background-size: 160px 160px;
-  background-position: center center;
 }
 
 .fitness-bracelets::before {
   content: "";
   background-image: url("../images/category/fitness-bracelets.svg");
-  background-repeat: no-repeat;
-  background-size: 160px 160px;
-  background-position: center center;
 }
 
 .smart-watches::before {
   content: "";
   background-image: url("../images/category/smart-watches.svg");
-  background-repeat: no-repeat;
-  background-size: 160px 160px;
-  background-position: center center;
 }
 
 .quadcopters::before {
   content: "";
   background-image: url("../images/category/quadcopters.svg");
-  background-repeat: no-repeat;
-  background-size: 160px 160px;
-  background-position: center center;
 }
 
 .assortment-link:hover::before {
@@ -741,16 +736,30 @@ body {
   min-width: 160px;
 }
 
+.delivery-button {
+  padding-left: 18px;
+}
+
+.guarantee-button {
+  padding-left: 20px;
+}
+
+.credit-button {
+  padding-left: 34px;
+}
+
 .current-services-button {
   color: #FFE17F;
   background: #000000;
   width: 100%;
+  text-align: left;
 }
 
 .current-services-button:hover,
 .current-services-button:active {
   color: #FFE17F;
   background: #000000;
+  padding-left: 60px;
 }
 
 .current-services-button:focus {
@@ -788,21 +797,21 @@ body {
   background-image: url(../images/services/delivery.svg);
   background-size: 136px 165px;
   background-repeat: no-repeat;
-  background-position: 674px 50%;
+  background-position: 91% 50%;
 }
 
 .services-guarantee {
   background-image: url(../images/services/quarantee.svg);
   background-size: 171px 195px;
   background-repeat: no-repeat;
-  background-position: 674px 50%;
+  background-position: 96% 50%;
 }
 
 .services-credit {
   background-image: url(../images/services/credit.svg);
   background-size: 156px 188px;
   background-repeat: no-repeat;
-  background-position: 689px 50%;
+  background-position: 96% 50%;
 }
 
 .special-services-button {
@@ -828,28 +837,61 @@ body {
   background-size: 47px 32px;
 }
 
-.special-services-button::after {
-  content: "";
+.special-services-info {
   position: absolute;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(220, 220, 220, 0.8);
-  background-image: url("../images/icons/info.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 4px 12px;
-  opacity: 0.3;
-  right: 42px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-
-.special-services-button:hover::after {
-  opacity: 1;
+  top: 30px;
+  right: 43px;
   background-color: rgba(220, 220, 220, 0.5);
 }
+
+.special-services-info::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 12px;
+  ;
+  background-image: url("../images/icons/info.svg");
+  background-repeat: no-repeat;
+  background-size: 4px 12px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+}
+
+.special-services-button:hover::before {
+  background-color: #FFC700;
+}
+
+.special-services-button:hover .special-services-info::after {
+  opacity: 1;
+}
+
+.special-services-button:active {
+  opacity: 0.3;
+}
+
+.special-services-button:active::before {
+  background-color: #FFC700;
+}
+
+.special-services-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.special-services-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.special-services-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
 
 /* Обертка для создания колонок */
 
@@ -961,9 +1003,32 @@ body {
   margin: 0;
 }
 
-.contacts-phone {
+.contacts-phone,
+.contacts-phone:visited {
   color: inherit;
   text-decoration-skip-ink: none;
+}
+
+.contacts-phone:hover {
+  opacity: 0.6;
+}
+
+.contacts-phone:active {
+  opacity: 0.3;
+}
+
+.contacts-phone:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.contacts-phone:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.contacts-phone:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .contacts-schedule-list {
@@ -1085,9 +1150,20 @@ body {
 }
 
 .page-footer .contacts-address {
+  position: relative;
   font-size: 16px;
   line-height: 20px;
   grid-row: 2/3;
+}
+
+.page-footer .contacts-address::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 7px;
+  background-color: #FFC500;
+  left: 0;
+  bottom: -64px;
 }
 
 .page-footer .site-navigation {
@@ -1131,7 +1207,6 @@ body {
   right: 0;
   background-color: #FFC700;
 }
-
 
 .footer-site-navigation-link:focus {
   outline: 2px solid #AF4FFF;
@@ -1191,23 +1266,47 @@ body {
   gap: 15px;
 }
 
-
 .socials-link {
-  display: block;
+  position: relative;
+  color: inherit;
+  display: flex;
   min-width: 40px;
   min-height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-link::before {
+  content: "";
+  position: absolute;
+  display: block;
   padding: 10px;
-  color: inherit;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
-.socials-link:hover {
+.socials-link svg {
+  z-index: 1;
+}
+
+.socials-link path {
+  fill: #444444;
+}
+
+.socials-link:hover::before {
   background-color: #FFC700;
 }
 
-.socials-link:active {
+.socials-link:active::before {
   background-color: #FFC700;
+}
+
+.socials-link:active path {
+  opacity: 0.3;
 }
 
 .socials-link:focus {
@@ -1222,12 +1321,6 @@ body {
 .socials-link:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
-}
-
-.social-telegram {
-  background-image: url("../images/social/telegram.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .footer-html-academy-logo-link {
@@ -1420,6 +1513,46 @@ body {
   background-color: #F0F0F0;
 }
 
+.sorting-button {
+  display: block;
+  min-width: 30px;
+  min-height: 30px;
+  background-color: transparent;
+  border: none;
+  background-image: url("../images/icons/sorting-arrow.svg");
+  background-size: 11px 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.sorting-button-up {
+  transform: rotate(180deg);
+}
+
+.sorting-button:hover {
+  opacity: 0.5;
+}
+
+.sorting-button:active {
+  opacity: 1;
+}
+
+.sorting-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.sorting-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.sorting-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
 /* Карточки товаров */
 
 .products-wrapper {
@@ -1438,6 +1571,7 @@ body {
 }
 
 .products-card {
+  position: relative;
   width: 360px;
 }
 
@@ -1445,20 +1579,71 @@ body {
   margin-right: 0;
 }
 
-.products-card-link {
-  text-decoration: none;
-  color: #000000;
+.new-product::before {
+  content: "New";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  padding: 19px 5px;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  top: 27px;
+  right: 27px;
+  z-index: 2;
 }
 
-.products-card-image-link {
+.products-card-link {
+  position: relative;
+  text-decoration: none;
+  color: #000000;
   display: block;
+}
+
+.products-card-link::after {
+  content: "Подробнее";
+  font-family: "Raleway", "Arial", sans-serif;
+  line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 10px 38px;
+  background: linear-gradient(rgba(255, 255, 255, 0) 16px, rgba(255, 225, 127, 1) 16px, rgba(255, 225, 127, 1) 24px, rgba(255, 255, 255, 0) 24px);
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.products-card-image-wrapper {
+  display: block;
+  position: relative;
   margin-bottom: 32px;
 }
 
 .products-card-image {
+  position: relative;
   display: block;
   max-width: 360px;
   object-fit: contain;
+  z-index: 1;
+}
+
+.products-card-image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(240, 240, 240, 0.8);
+  z-index: 0;
 }
 
 .title-price-wrapper {
@@ -1477,6 +1662,45 @@ body {
 
 .products-card-price {
   line-height: 21px;
+}
+
+.products-card-link:hover .products-card-image-wrapper::after {
+  z-index: 2;
+}
+
+.products-card-link:hover .products-card-title {
+  opacity: 0.6;
+}
+
+.products-card-link:hover::after {
+  z-index: 3;
+}
+
+.products-card-link:active .products-card-image-wrapper::after {
+  z-index: 2;
+}
+
+.products-card-link:active .title-price-wrapper {
+  opacity: 0.3;
+}
+
+.products-card-link:active::after {
+  background: linear-gradient(rgba(255, 255, 255, 0) 16px, rgba(255, 199, 0, 1) 16px, rgba(255, 199, 0, 1) 24px, rgba(255, 255, 255, 0) 24px);
+  z-index: 3;
+}
+
+.products-card-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.products-card-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.products-card-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .download-more-button {
