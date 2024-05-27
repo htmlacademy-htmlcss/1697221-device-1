@@ -176,9 +176,8 @@ body {
 .page-header {
   position: relative;
   color: #000000;
-  padding: 20px 60px 20px;
+  padding: 20px 60px 134px;
   background: linear-gradient(#FFFFFF 40px, #FFE17F 40px);
-  z-index: 1;
 }
 
 .navigation {
@@ -230,6 +229,7 @@ body {
 .search-form {
   display: flex;
   width: 517px;
+  position: relative;
 }
 
 .search-field {
@@ -252,7 +252,27 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.search-field:focus {
+  outline: none;
+}
+
+.search-field-wrapper {
+  position: absolute;
+  display: none;
+  width: 357px;
+  height: 43px;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  top: 0;
+  left: 0;
+}
+
+.search-field:focus ~ .search-field-wrapper {
+  display: inline-block;
+}
+
 .search-button {
+  position: relative;
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -261,6 +281,26 @@ body {
   border-radius: 0 50px 50px 0;
   border: 2px solid #000000;
   border-left: 1px solid #000000;
+}
+
+.search-button::after {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 160px;
+  height: 40px;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  top: 0;
+  left: 0;
+}
+
+.search-button:focus {
+  outline: none;
+}
+
+.search-button:focus::after {
+  display: inline-block ;
 }
 
 .user-navigation {
@@ -308,6 +348,10 @@ body {
   background-repeat: no-repeat;
   background-size: 15px 12px;
   background-position: left center;
+}
+
+.logout-link {
+  opacity: 0.3;
 }
 
 .compare-link {
@@ -411,6 +455,7 @@ body {
 }
 
 .navigation-catalog-link {
+  position: relative;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -422,7 +467,6 @@ body {
   display: inline-block;
   width: 50px;
   height: 50px;
-  ;
   border-radius: 50%;
   border: 2px solid #000000;
   background-image: url("../images/icons/plus.svg");
@@ -440,8 +484,49 @@ body {
   opacity: 1;
 }
 
+.catalog-menu {
+  width: 1160px;
+  position: absolute;
+  left: -60px;
+  background-color: #FFE17F;
+  padding: 14px 60px 25px;
+  z-index: 5;
+}
+
+.catalog-table {
+  padding-top: 14px;
+  padding-bottom: 27px;
+  width: 675px;
+  border-collapse: collapse;
+}
+
+.catalog-table-data {
+  width: 200px;
+  padding-bottom: 18px;
+  padding-right: 10px;
+}
+
+.catalog-table-column-1 {
+  width: 242px;
+}
+
+.catalog-link {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #000000;
+  text-decoration: none;
+}
+
+.catalog-menu-details[open] .navigation-catalog-link::after {
+  background-image: url("../images/icons/minus.svg");
+}
+
 .main-index {
-  margin-top: -190px;
+  margin-top: -150px;
 }
 
 
@@ -459,8 +544,6 @@ body {
 
 .slider-item {
   position: relative;
-  padding-top: 190px;
-  background: linear-gradient(#FFFFFF 40px, #FFE17F 40px, #FFE17F 340px, #FFFFFF 340px);
 }
 
 .slider-column-wrapper {
@@ -487,7 +570,6 @@ body {
   justify-content: space-between;
   top: 211px;
   right: 0;
-  /* z-index: 1; */
 }
 
 .slider-button {
@@ -544,7 +626,7 @@ body {
 
 .slider-number {
   position: absolute;
-  top: 219px;
+  top: 29px;
   right: 49px;
   font-size: 180px;
   line-height: 135px;
@@ -601,9 +683,9 @@ body {
 
 .slider-pagination-button {
   display: block;
-  width: 12px;
-  height: 12px;
-  /* border-radius: 50%; */
+  padding: 6px;
+  border-radius: 50%;
+  border: 2px solid #000000;
 }
 
 /* Ассортимент */
@@ -1749,17 +1831,6 @@ body {
 .pagination-button:disabled {
   background-color: transparent;
   color: rgba(68, 68, 68, 0.3);
-}
-
-.pagination-button-disabled,
-.pagination-button-disabled:hover,
-.pagination-button-disabled:active,
-.pagination-button-disabled:focus,
-.pagination-button-disabled:focus-visible {
-  color: rgba(68, 68, 68, 0.3);
-  cursor: auto;
-  background-color: transparent;
-  outline: none;
 }
 
 .products-pagination {

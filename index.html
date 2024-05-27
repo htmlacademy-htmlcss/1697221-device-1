@@ -23,6 +23,7 @@
               <span class="visually-hidden">Введите запрос.</span>
             </label>
             <input class="field search-field" type="search" id="search-input" name="search-field" placeholder="Поиск по сайту" required>
+            <span class="search-field-wrapper"></span>
             <button class="button form-button search-button" type="submit">Найти</button>
           </form>
 
@@ -42,8 +43,37 @@
 
         <ul class="site-navigation">
           <li class="site-navigation-item navigation-catalog">
-            <a class="navigation-link site-navigation-link navigation-catalog-link" href="#">Каталог товаров
-            </a>
+            <details class="catalog-menu-details">
+              <summary class="navigation-link site-navigation-link navigation-catalog-link">Каталог товаров</summary>
+              <div class="catalog-menu">
+                <table class="catalog-table">
+                  <tr class="catalog-table-row">
+                    <td class="catalog-table-data catalog-table-column-1">
+                      <a class="catalog-link" href="#">Виртуальная реальность</a>
+                    </td>
+                    <td class="catalog-table-data catalog-table-column-2">
+                      <a class="catalog-link" href="#">Фитнес-браслеты</a>
+                    </td>
+                    <td class="catalog-table-data catalog-table-column-3">
+                      <a class="catalog-link" href="#">Квадрокоптеры</a>
+                    </td>
+                  </tr>
+                  <tr class="catalog-table-row">
+                    <td class="catalog-table-data catalog-table-column-1">
+                      <a class="catalog-link" href="#">Моноподы для селфи</a>
+                    </td>
+                    <td class="catalog-table-data catalog-table-column-2">
+                      <a class="catalog-link" href="#">Умные часы</a>
+                    </td>
+                  </tr>
+                  <tr class="catalog-table-row">
+                    <td class="catalog-table-data catalog-table-column-1">
+                      <a class="catalog-link" href="#">Экшн-камеры</a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </details>
           </li>
           <li class="site-navigation-item">
             <a class="navigation-link site-navigation-link" href="#delivery-anchor">Доставка</a>
@@ -262,7 +292,6 @@
         <div class="page-container">
           <button class="button special-services-button">Доставим редкий товар под заказ
             <span class="special-services-info">
-              <span class="visually-hidden">Узнать подробнее</span>
             </span>
           </button>
         </div>
