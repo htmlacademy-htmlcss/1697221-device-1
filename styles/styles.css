@@ -68,7 +68,7 @@ body {
 
 .field:focus {
   outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
+  outline-offset: 4px;
 }
 
 .field:focus:not(:focus-visible) {
@@ -77,7 +77,7 @@ body {
 
 .field:focus-visible {
   outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
+  outline-offset: 4px;
 }
 
 .field:disabled {
@@ -185,30 +185,30 @@ body {
   flex-direction: column;
 }
 
-.navigation-link-logo {
+.device-logo-link {
   display: block;
   width: 145px;
   margin-bottom: 30px;
 }
 
-.navigation-link-logo:hover {
+.navigation-logo-link:hover {
   opacity: 0.6;
 }
 
-.navigation-link-logo:active {
+.navigation-logo-link:active {
   opacity: 0.3;
 }
 
-.navigation-link-logo:focus {
+.navigation-logo-link:focus {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
 
-.navigation-link-logo:focus:not(:focus-visible) {
+.navigation-logo-link:focus:not(:focus-visible) {
   outline: none;
 }
 
-.navigation-link-logo:focus-visible {
+.navigation-logo-link:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -252,19 +252,28 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search-field:focus {
+.search-field:focus,
+.search-field:focus-visible {
   outline: none;
 }
 
 .search-field-wrapper {
   position: absolute;
   display: none;
-  width: 357px;
-  height: 40px;
+  width: 362px;
+  height: 48px;
   outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: -2px;
+}
+
+
+.search-field:focus ~ .search-field-wrapper {
+  display: inline-block;
+}
+
+.search-field:focus:not(:focus-visible) ~ .search-field-wrapper {
+  display: none;
 }
 
 .search-field:focus ~ .search-field-wrapper {
@@ -288,11 +297,12 @@ body {
   display: none;
   position: absolute;
   width: 160px;
-  height: 40px;
+  height: 44px;
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
-  top: 0;
-  left: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .search-button:focus {
@@ -300,7 +310,7 @@ body {
 }
 
 .search-button:focus::after {
-  display: inline-block ;
+  display: inline-block;
 }
 
 .user-navigation {
@@ -315,10 +325,7 @@ body {
 }
 
 .login-item {
-  flex-basis: 230px;
   margin-right: auto;
-  display: flex;
-  align-items: center;
 }
 
 .user-navigation-link {
@@ -388,6 +395,7 @@ body {
 .user-navigation-item:not(:first-child) {
   margin-left: 18px;
 }
+
 
 .site-navigation {
   font-family: "Raleway", "Arial", sans-serif;
@@ -683,10 +691,58 @@ body {
 
 .slider-pagination-button {
   display: block;
-  padding: 6px;
+  position: relative;
+  cursor: pointer;
+  padding: 4px;
   border-radius: 50%;
+  background-color: #FFFFFF;
   border: 2px solid #000000;
 }
+
+.slider-pagination-button:hover {
+  opacity: 0.6;
+}
+
+.slider-pagination-button:active {
+  opacity: 0.3;
+}
+
+.slider-pagination-button:disabled {
+  cursor: auto;
+  opacity: 0.1;
+}
+
+.slider-pagination-button::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  outline: 2px solid #AF4FFF;
+}
+
+.slider-pagination-button:not(:focus-visible)::after {
+  outline: none;
+}
+
+.slider-pagination-button:focus-visible::after {
+  outline: 2px solid #AF4FFF;
+}
+
+.slider-pagination-button-current {
+  background-color: #000000;
+}
+
+.slider-pagination-button-current:hover {
+  opacity: 0.6;
+}
+
+.slider-pagination-button-current:active {
+  opacity: 0.3;
+}
+
 
 /* Ассортимент */
 
@@ -816,18 +872,7 @@ body {
 
 .services-button {
   min-width: 160px;
-}
-
-.delivery-button {
-  padding-left: 18px;
-}
-
-.guarantee-button {
-  padding-left: 20px;
-}
-
-.credit-button {
-  padding-left: 34px;
+  text-align: center;
 }
 
 .current-services-button {
@@ -835,6 +880,18 @@ body {
   background: #000000;
   width: 100%;
   text-align: left;
+}
+
+.delivery-button.current-services-button {
+  padding-left: 18px;
+}
+
+.guarantee-button.current-services-button {
+  padding-left: 21px;
+}
+
+.credit-button.current-services-button {
+  padding-left: 35px;
 }
 
 .current-services-button:hover,
@@ -1178,6 +1235,20 @@ body {
   border: 3px solid #C4C4C4;
 }
 
+.subscribe-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.subscribe-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.subscribe-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
 .subscribe-form-text {
   max-width: 300px;
   margin: 0;
@@ -1203,10 +1274,6 @@ body {
   grid-template-rows: 36px auto auto;
   gap: 35px 100px;
   align-items: center;
-}
-
-.footer-device-logo-link {
-  width: 145px;
 }
 
 .footer-device-logo-link:hover {
