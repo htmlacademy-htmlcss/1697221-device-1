@@ -39,6 +39,36 @@
             </li>
             <li class="user-navigation-item">
               <a class="navigation-link  user-navigation-link cart-link" href="#"><span class="chosen-products">2</span>Корзина</a>
+              <div class="popover popover-cart">
+                <div class="popover-content">
+                  <h2 class="visually-hidden">Корзина</h2>
+                  <ul class="cart-items-list">
+                    <li class="cart-item">
+                      <a class="cart-item-link" href="#">
+                        <img class="cart-item-image" src="/images/amateur-monopod-small.jpg" alt="" width="39" height="43">
+                        <p class="cart-item-title">Любительская<br>селфи-палка</p>
+                      </a>
+                      <button type="button" class="button cart-item-button">
+                        <span class="visually-hidden">Удалить товар из корзины</span>
+                      </button>
+                    </li>
+                    <li class="cart-item">
+                      <a class="cart-item-link" href="#">
+                        <img class="cart-item-image" src="/images/professional-monopod-small.jpg" alt="" width="39" height="43">
+                        <p class="cart-item-title">Профессиональная<br>селфи-палка</p>
+                      </a>
+                      <button type="button" class="button cart-item-button">
+                        <span class="visually-hidden">Удалить товар из корзины</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="cart-results">
+                    <p>Товаров: 2</p>
+                    <p>Сумма: 2000 ₽</p>
+                  </div>
+                  <button type="button" class="button open-cart-button">Открыть корзину</button>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -62,7 +92,7 @@
                   </tr>
                   <tr class="catalog-table-row">
                     <td class="catalog-table-data catalog-table-column-1">
-                      <a class="navigation-link catalog-link" href="#">Моноподы для селфи</a>
+                      <a class="navigation-link catalog-link" href="catalog.html">Моноподы для селфи</a>
                     </td>
                     <td class="catalog-table-data catalog-table-column-2">
                       <a class="navigation-link catalog-link" href="#">Умные часы</a>
@@ -125,14 +155,23 @@
                 <legend class="filter-group-title">Стоимость</legend>
                 <div class="range-scale">
                   <div class="range-bar" style="left: 0; width: 119px">
-                    <button class="range-toggle toggle-min" type="button"></button>
-                    <button class="range-toggle toggle-max" type="button"></button>
-                    <label class="catalog-filter-label range-inputs-reference range-inputs-min-price">от
-                      <input class="range-input" type="number" value="0" name="min-price">
-                    </label>
-                    <label class="catalog-filter-label range-inputs-reference range-inputs-max-price">до
-                      <input class="range-input" type="number" value="5000" name="max-price" style="width: 40px">
-                    </label>
+                    <div class="price-controls min-price">
+                      <button class="range-toggle toggle-min" type="button">
+                        <span class="visually-hidden">Установить минимальную цену</span>
+                      </button>
+                      <label class="catalog-filter-label">от
+                        <input class="range-input" type="number" value="0" name="min-price">
+                      </label>
+                    </div>
+
+                    <div class="price-controls max-price">
+                      <button class="range-toggle toggle-max" type="button">
+                        <span class="visually-hidden">Установить максимальную цену</span>
+                      </button>
+                      <label class="catalog-filter-label">до
+                        <input class="range-input" type="number" value="5000" name="max-price" style="width: 40px">
+                      </label>
+                    </div>
                   </div>
                 </div>
               </fieldset>
