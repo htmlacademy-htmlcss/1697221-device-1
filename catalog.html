@@ -28,45 +28,76 @@
           </form>
 
           <ul class="user-navigation">
-            <li class="user-navigation-item login-name-item">
-              <a class="navigation-link login-name" href="#">Коля Петухов</a>
-            </li>
-            <li class="user-navigation-item logout-item">
-              <a class="navigation-link user-navigation-link logout-link" href="#">Выйти</a>
+            <li class="user-navigation-item login-item">
+              <a class="navigation-link" href="#">
+                <svg width="15" height="12" viewBox="0 0 15 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 12H14C13.8 9.4 11.9 7.2 9.3 6.5C10.3 5.9 11 4.8 11 3.5C11 1.6 9.4 0 7.5 0C5.6 0 4 1.6 4 3.5C4 4.8 4.7 5.9 5.7 6.5C3.1 7.2 1.2 9.4 1 12Z"/>
+                </svg>Коля Петухов</a>
+
+                <a class="navigation-link user-navigation-link logout-link" href="#">Выйти</a>
             </li>
             <li class="user-navigation-item">
-              <a class="navigation-link user-navigation-link compare-link" href="#">Сравнить</a>
+              <a class="navigation-link user-navigation-link" href="#">
+                <svg width="10" height="12" viewBox="0 0 10 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_11518_3333)">
+                  <path d="M6 0H4V12H6V0Z"/>
+                  <path d="M2 4H0V12H2V4Z"/>
+                  <path d="M10 3H8V12H10V3Z"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_11518_3333">
+                  <rect width="10" height="12" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>Сравнить</a>
             </li>
             <li class="user-navigation-item">
-              <a class="navigation-link  user-navigation-link cart-link" href="#"><span class="chosen-products">2</span>Корзина</a>
+              <a class="navigation-link  user-navigation-link cart-link" href="#">
+                <span class="chosen-products">2</span>
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_11518_3329)">
+                  <path d="M15.3 5L11.8 5.2L8.6 0.3C8.5 0.1 8.2 0 8 0C7.8 0 7.5 0.1 7.4 0.3L4.2 5.2H0.7C0.3 5.2 0 5.5 0 5.9C0 6 0 6 0 6.1L1.9 12.9C2.1 13.6 2.6 14 3.3 14H12.7C13.4 14 13.9 13.6 14.1 12.9L16 6C16 5.9 16 5.9 16 5.8C16 5.4 15.7 5 15.3 5ZM8 1.9L10.2 5.1H5.9L8 1.9Z"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_11518_3329">
+                  <rect width="16" height="14" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>Корзина</a>
               <div class="popover popover-cart">
                 <div class="popover-content">
                   <h2 class="visually-hidden">Корзина</h2>
                   <ul class="cart-items-list">
                     <li class="cart-item">
-                      <a class="cart-item-link" href="#">
-                        <img class="cart-item-image" src="/images/amateur-monopod-small.jpg" alt="" width="39" height="43">
-                        <p class="cart-item-title">Любительская<br>селфи-палка</p>
-                      </a>
-                      <button type="button" class="button cart-item-button">
-                        <span class="visually-hidden">Удалить товар из корзины</span>
-                      </button>
+                      <div class="popover-wrapper">
+                        <a class="cart-item-link" href="#">
+                          <img class="cart-item-image" src="/images/amateur-monopod-small.jpg" alt="" width="39" height="43">
+                          <p class="cart-item-title">Любительская<br>селфи-палка</p>
+                        </a>
+                        <button type="button" class="button cart-item-button">
+                          <span class="visually-hidden">Удалить товар из корзины</span>
+                        </button>
+                      </div>
                     </li>
                     <li class="cart-item">
-                      <a class="cart-item-link" href="#">
-                        <img class="cart-item-image" src="/images/professional-monopod-small.jpg" alt="" width="39" height="43">
-                        <p class="cart-item-title">Профессиональная<br>селфи-палка</p>
-                      </a>
-                      <button type="button" class="button cart-item-button">
-                        <span class="visually-hidden">Удалить товар из корзины</span>
-                      </button>
+                      <div class="popover-wrapper">
+                        <a class="cart-item-link" href="#">
+                          <img class="cart-item-image" src="/images/professional-monopod-small.jpg" alt="" width="39" height="43">
+                          <p class="cart-item-title">Профессиональная<br>селфи-палка</p>
+                        </a>
+                        <button type="button" class="button cart-item-button">
+                          <span class="visually-hidden">Удалить товар из корзины</span>
+                        </button>
+                      </div>
                     </li>
                   </ul>
                   <div class="cart-results">
-                    <p>Товаров: 2</p>
-                    <p>Сумма: 2000 ₽</p>
+                    <div class="popover-wrapper">
+                      <p>Товаров: 2</p>
+                      <p>Сумма: 2000 ₽</p>
+                    </div>
                   </div>
-                  <button type="button" class="button open-cart-button">Открыть корзину</button>
+                  <a class="button open-cart-button" href="">Открыть корзину</a>
                 </div>
               </div>
             </li>
@@ -251,9 +282,29 @@
                 </select>
 
                 <button class="sorting-button sorting-button-up">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_11518_3353)">
+                    <path d="M5.49976 10L0.499756 0H10.4998" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_11518_3353">
+                    <rect width="11" height="10" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
                   <span class="visually-hidden">По возрастанию</span>
                 </button>
                 <button class="sorting-button">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_11518_3353)">
+                    <path d="M5.49976 10L0.499756 0H10.4998" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_11518_3353">
+                    <rect width="11" height="10" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
                   <span class="visually-hidden">По убыванию</span>
                 </button>
               </div>
@@ -263,8 +314,8 @@
               <div class="products-wrapper">
 
                 <ul class="products-card-list">
-                  <li class="products-card">
-                    <a class="products-card-link" href="#">
+                  <li class="products-card new-product">
+                    <a class="products-card-link " href="#">
                       <span class="products-card-image-wrapper">
                         <img class="products-card-image" src="images/catalog/amateur-monopod.jpg" width="360" height="380" alt="Любительская селфи-палка.">
                       </span>

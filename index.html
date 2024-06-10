@@ -29,42 +29,73 @@
 
           <ul class="user-navigation">
             <li class="user-navigation-item login-item">
-              <a class="navigation-link user-navigation-link login-link" href="#">Войти</a>
+              <a class="navigation-link user-navigation-link" href="#">
+                <svg width="15" height="12" viewBox="0 0 15 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 12H14C13.8 9.4 11.9 7.2 9.3 6.5C10.3 5.9 11 4.8 11 3.5C11 1.6 9.4 0 7.5 0C5.6 0 4 1.6 4 3.5C4 4.8 4.7 5.9 5.7 6.5C3.1 7.2 1.2 9.4 1 12Z"/>
+                </svg>Войти</a>
             </li>
             <li class="user-navigation-item">
-              <a class="navigation-link user-navigation-link compare-link" href="#">Сравнить</a>
+              <a class="navigation-link user-navigation-link" href="#">
+                <svg width="10" height="12" viewBox="0 0 10 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_11518_3333)">
+                  <path d="M6 0H4V12H6V0Z"/>
+                  <path d="M2 4H0V12H2V4Z"/>
+                  <path d="M10 3H8V12H10V3Z"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_11518_3333">
+                  <rect width="10" height="12" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>Сравнить</a>
             </li>
             <li class="user-navigation-item">
               <a class="navigation-link  user-navigation-link cart-link" href="#">
-                <span class="chosen-products">2</span>Корзина</a>
+                <span class="chosen-products">2</span>
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_11518_3329)">
+                  <path d="M15.3 5L11.8 5.2L8.6 0.3C8.5 0.1 8.2 0 8 0C7.8 0 7.5 0.1 7.4 0.3L4.2 5.2H0.7C0.3 5.2 0 5.5 0 5.9C0 6 0 6 0 6.1L1.9 12.9C2.1 13.6 2.6 14 3.3 14H12.7C13.4 14 13.9 13.6 14.1 12.9L16 6C16 5.9 16 5.9 16 5.8C16 5.4 15.7 5 15.3 5ZM8 1.9L10.2 5.1H5.9L8 1.9Z"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_11518_3329">
+                  <rect width="16" height="14" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>Корзина</a>
               <div class="popover popover-cart">
                 <div class="popover-content">
                   <h2 class="visually-hidden">Корзина</h2>
                   <ul class="cart-items-list">
                     <li class="cart-item">
-                      <a class="cart-item-link" href="#">
-                        <img class="cart-item-image" src="/images/amateur-monopod-small.jpg" alt="" width="39" height="43">
-                        <p class="cart-item-title">Любительская<br>селфи-палка</p>
-                      </a>
-                      <button type="button" class="button cart-item-button">
-                        <span class="visually-hidden">Удалить товар из корзины</span>
-                      </button>
+                      <div class="popover-wrapper">
+                        <a class="cart-item-link" href="#">
+                          <img class="cart-item-image" src="/images/amateur-monopod-small.jpg" alt="" width="39" height="43">
+                          <p class="cart-item-title">Любительская<br>селфи-палка</p>
+                        </a>
+                        <button type="button" class="button cart-item-button">
+                          <span class="visually-hidden">Удалить товар из корзины</span>
+                        </button>
+                      </div>
                     </li>
                     <li class="cart-item">
-                      <a class="cart-item-link" href="#">
-                        <img class="cart-item-image" src="/images/professional-monopod-small.jpg" alt="" width="39" height="43">
-                        <p class="cart-item-title">Профессиональная<br>селфи-палка</p>
-                      </a>
-                      <button type="button" class="button cart-item-button">
-                        <span class="visually-hidden">Удалить товар из корзины</span>
-                      </button>
+                      <div class="popover-wrapper">
+                        <a class="cart-item-link" href="#">
+                          <img class="cart-item-image" src="/images/professional-monopod-small.jpg" alt="" width="39" height="43">
+                          <p class="cart-item-title">Профессиональная<br>селфи-палка</p>
+                        </a>
+                        <button type="button" class="button cart-item-button">
+                          <span class="visually-hidden">Удалить товар из корзины</span>
+                        </button>
+                      </div>
                     </li>
                   </ul>
                   <div class="cart-results">
-                    <p>Товаров: 2</p>
-                    <p>Сумма: 2000 ₽</p>
+                    <div class="popover-wrapper">
+                      <p>Товаров: 2</p>
+                      <p>Сумма: 2000 ₽</p>
+                    </div>
                   </div>
-                  <button type="button" class="button open-cart-button">Открыть корзину</button>
+                  <a class="button open-cart-button" href="">Открыть корзину</a>
                 </div>
               </div>
             </li>
@@ -128,7 +159,6 @@
         <ul class="slider-list">
           <li class="slider-item quadcopter-item">
             <h3 class="visually-hidden">Квадрокоптер с мощным лазером</h3>
-            <span class="slider-number">01</span>
             <div class="slider-column-wrapper">
               <div class="slider-image-gallery">
                 <img class="slider-image" src="images/slider/slider-quadcopter.png" width="560" height="560" alt="Квадрокоптер.">
@@ -142,6 +172,7 @@
                 </div>
               </div>
               <div class="slider-description-wrapper">
+                <span class="slider-number">01</span>
                 <p class="main-title slider-title">Порхает как бабочка, жалит как пчела!</p>
                 <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
                 <a class="button main-button slider-info-button" href="#">Подробнее</a>
@@ -163,7 +194,6 @@
 
           <li class="slider-item bracelet-item">
             <h3 class="visually-hidden">Мотивирующий фитнес-браслет</h3>
-            <span class="slider-number">02</span>
             <div class="slider-column-wrapper">
               <div class="slider-image-gallery">
                 <img class="slider-image" src="images/slider/slider-bracelet.png" width="560" height="560" alt="Фитнес-браслет.">
@@ -177,6 +207,7 @@
                 </div>
               </div>
               <div class="slider-description-wrapper">
+                <span class="slider-number">02</span>
                 <p class="main-title slider-title">Худеем правильно!</p>
                 <p class="slider-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
                 <a class="button main-button slider-info-button" href="#">Подробнее</a>
@@ -192,7 +223,6 @@
           </li>
           <li class="slider-item monopod-item">
             <h3 class="visually-hidden">Самый длинный монопод</h3>
-            <span class="slider-number">03</span>
             <div class="slider-column-wrapper">
               <div class="slider-image-gallery">
                 <img class="slider-image" src="images/slider/slider-monopod.png" width="560" height="560" alt="Монопод.">
@@ -206,6 +236,7 @@
                 </div>
               </div>
               <div class="slider-description-wrapper">
+                <span class="slider-number">03</span>
                 <p class="main-title slider-title">Делай селфи, как Бен Стиллер! </p>
                 <p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
                 <a class="button main-button slider-info-button" href="#">Подробнее</a>
@@ -475,10 +506,59 @@
           </svg>
           <span class="visually-hidden">Сайт разработан в HTML Academy.</span>
         </a>
-
       </div>
     </footer>
+    <div class="modal-container">
+      <div class="modal modal-delivery">
+        <button class="button modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="main-title modal-title">Доставка под заказ</h2>
+          <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="field-group name-group">
+              <label for="client-name" class="field-group-title">Ваше имя:</label>
+              <input type="text" class="form-field name-field" id="client-name" name="client-name" placeholder="Введите имя" required>
+              <p class="prompt">Добавьте имя</p>
+            </div>
 
+            <div class="field-group email-group">
+              <label for="client-email" class="field-group-title">Ваш e-mail: </label>
+              <input type="email" class="form-field email-field" id="client-email" name="client-email" placeholder="Введите e-mail" value="почта" required>
+              <p class="prompt">Забавный у вас адрес</p>
+            </div>
+
+            <div class="field-group products-descriprion-group">
+              <label for="products-descriprion" class="field-group-title">Что нужно привезти:</label>
+              <input type="text" class="form-field" id="products-descriprion" name="products-descriprion" placeholder="В свободной форме" required>
+            </div>
+
+            <div class="field-group products-quantity-group">
+              <span class="field-group-title">
+              <label for="products-quantity" class="field-group-title">Количество:</label>
+              <span class="tooltip">
+                <button class="tooltip-toogle" type="button" aria-labelledby="tooltip-label-date">
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+              </span>
+            </span>
+              <div class="quantity-wrapper">
+                <button class="button quantity-button quantity-minus-button">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <input type="number" class="form-field quantity-field" id="products-quantity" min="1" value="1" name="products-quantity">
+                <span class="quantity-input-buttons-wrapper"></span>
+                <button class="button quantity-button quantity-plus-button">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </div>
+            </div>
+
+            <button type="submit" class="button main-button delivery-form-button">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 
 </html>
