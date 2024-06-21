@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
 
   <body>
@@ -19,12 +21,14 @@
 
         <div class="header-column-wrapper">
           <form class="search-form" role="search" action="https://echo.htmlacademy.ru/" method="get">
+            <!-- Обертка ниже нужна для того, чтобы в состоянии фокуса поле поиска обрамлялось прямоугольником в соответствии со стайлгайдом -->
             <span class="search-field-wrapper">
               <label for="search-input">
                 <span class="visually-hidden">Введите запрос.</span>
               </label>
               <input class="search-field" type="search" id="search-input" name="search-field" placeholder="Поиск по сайту" required>
             </span>
+            <!-- Обертка ниже нужна для того, чтобы в состоянии фокуса кнопка поиска обрамлялась прямоугольником в соответствии со стайлгайдом -->
             <span class="search-button-wrapper">
               <button class="button search-button" type="submit">Найти</button>
             </span>
@@ -65,7 +69,7 @@
                     </clipPath>
                   </defs>
                 </svg>Корзина</a>
-              <div class="popover popover-cart popover-open">
+              <div class="popover popover-cart">
                 <div class="popover-content">
                   <h2 class="visually-hidden">Корзина</h2>
                   <ul class="cart-items-list">
@@ -75,7 +79,7 @@
                           <img class="cart-item-image" src="/images/amateur-monopod-small.jpg" alt="" width="39" height="43">
                           <p class="cart-item-title">Любительская<br>селфи-палка</p>
                         </a>
-                        <button type="button" class="button delete-item-button">
+                        <button class="button delete-item-button" type="button">
                           <span class="visually-hidden">Удалить товар из корзины</span>
                         </button>
                       </div>
@@ -86,7 +90,7 @@
                           <img class="cart-item-image" src="/images/professional-monopod-small.jpg" alt="" width="39" height="43">
                           <p class="cart-item-title">Профессиональная<br>селфи-палка</p>
                         </a>
-                        <button type="button" class="button delete-item-button">
+                        <button class="button delete-item-button" type="button">
                           <span class="visually-hidden">Удалить товар из корзины</span>
                         </button>
                       </div>
@@ -157,6 +161,8 @@
         </ul>
       </nav>
     </header>
+
+    <!-- Основное содержимое страницы -->
 
     <main class="main-index main-container">
       <h1 class="visually-hidden">Интернет-магазин Device</h1>
@@ -296,7 +302,7 @@
             <a class="assortment-link vr" href="#">Виртуальная реальность</a>
           </li>
           <li class="assortment-item">
-            <a class="assortment-link monopods" href="#">Моноподы<br>для селфи</a>
+            <a class="assortment-link monopods" href="#">Моноподы для&nbsp;селфи</a>
           </li>
           <li class="assortment-item">
             <a class="assortment-link action-cameras" href="#">Экшн-камеры</a>
@@ -336,7 +342,7 @@
                 <li class="services-description-item services-delivery active-tab">
                   <div class="services-description-wrapper">
                     <h3 class="main-title services-title" id="delivery-anchor">Доставка</h3>
-                    <p class="services-text">Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно! Ведь<br>мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                    <p class="services-text">Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь<br>мы неплохо заработаем, поднимая его на ваш этаж.</p>
                   </div>
                 </li>
 
@@ -361,8 +367,7 @@
 
         <div class="page-container">
           <button class="button special-services-button">Доставим редкий товар под заказ
-            <span class="special-services-info">
-            </span>
+            <span class="special-services-info"></span>
           </button>
         </div>
       </section>
@@ -415,24 +420,21 @@
             <p class="subscribe-text">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           </div>
 
-
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="subscribe-form-wrapper">
               <label for="subcribe-email">
                 <span class="visually-hidden">Введите ваш e-mail.</span>
               </label>
-              <input class="field" type="email" id="subcribe-email" name="subcribe-email" placeholder="Ваш e-mail" required>
+              <input class="subscribe-field" type="email" id="subcribe-email" name="subcribe-email" placeholder="Ваш e-mail" required>
               <button class="button subscribe-button" type="submit">Подписаться</button>
             </div>
             <p class="subscribe-form-text">Это бесплатно</p>
           </form>
-
         </div>
       </section>
     </main>
 
     <!-- Подвал -->
-
 
     <footer class="page-footer">
       <div class="page-container footer-container">
@@ -526,25 +528,25 @@
           <h2 class="main-title modal-title">Доставка под заказ</h2>
           <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="field-group name-group">
-              <label for="client-name" class="field-group-title">Ваше имя:</label>
-              <input type="text" class="form-field name-field" id="client-name" name="client-name" placeholder="Введите имя" required>
+              <label class="field-group-title" for="client-name">Ваше имя:</label>
+              <input class="form-field name-field" type="text" id="client-name" name="client-name" placeholder="Введите имя" required>
               <p class="prompt">Добавьте имя</p>
             </div>
 
             <div class="field-group email-group">
-              <label for="client-email" class="field-group-title">Ваш e-mail: </label>
-              <input type="email" class="form-field email-field" id="client-email" name="client-email" placeholder="Введите e-mail" value="почта" required>
+              <label class="field-group-title" for="client-email">Ваш e-mail: </label>
+              <input class="form-field email-field" type="email" id="client-email" name="client-email" placeholder="Введите e-mail" value="почта" required>
               <p class="prompt">Забавный у вас адрес</p>
             </div>
 
             <div class="field-group products-descriprion-group">
-              <label for="products-descriprion" class="field-group-title">Что нужно привезти:</label>
-              <input type="text" class="form-field" id="products-descriprion" name="products-descriprion" placeholder="В свободной форме" required>
+              <label class="field-group-title" for="products-descriprion">Что нужно привезти:</label>
+              <input class="form-field" type="text" id="products-descriprion" name="products-descriprion" placeholder="В свободной форме" required>
             </div>
 
             <div class="field-group products-quantity-group">
               <span class="field-group-title">
-                <label for="products-quantity" class="field-group-title">Количество:</label>
+                <label class="field-group-title" for="products-quantity">Количество:</label>
                 <span class="tooltip">
                   <button class="tooltip-toogle" type="button" aria-labelledby="tooltip-label-date">
                   </button>
@@ -555,7 +557,7 @@
                 <button class="button quantity-button quantity-minus-button">
                   <span class="visually-hidden">Уменьшить</span>
                 </button>
-                <input type="number" class="form-field quantity-field" id="products-quantity" min="1" value="1" name="products-quantity">
+                <input class="form-field quantity-field" type="number" id="products-quantity" min="1" value="1" name="products-quantity">
                 <span class="quantity-input-buttons-wrapper"></span>
                 <button class="button quantity-button quantity-plus-button">
                   <span class="visually-hidden">Увеличить</span>
@@ -563,7 +565,7 @@
               </div>
             </div>
 
-            <button type="submit" class="button main-button delivery-form-button">Отправить</button>
+            <button class="button main-button delivery-form-button" type="submit">Отправить</button>
           </form>
         </section>
       </div>
