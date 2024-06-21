@@ -390,7 +390,7 @@ body {
   transform: translateX(-50%);
   width: 14px;
   height: 6px;
-  background-image: url("/images/icons/triangle.svg");
+  background-image: url("../images/icons/triangle.svg");
 }
 
 .popover-open {
@@ -2121,6 +2121,9 @@ body {
 }
 
 .sorting-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 30px;
   min-height: 30px;
   background-color: transparent;
@@ -2482,7 +2485,7 @@ body {
   right: 70px;
   width: 26px;
   height: 26px;
-  background-image: url("/images/icons/modal-cross.svg");
+  background-image: url("../images/icons/modal-cross.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -2642,7 +2645,7 @@ body {
 
 .name-field {
   padding-right: 35px;
-  background-image: url("/images/icons/login.svg");
+  background-image: url("../images/icons/login.svg");
   background-size: 15px 12px;
   background-repeat: no-repeat;
   background-position: right 20px center;
@@ -2650,7 +2653,7 @@ body {
 
 .email-field {
   padding-right: 35px;
-  background-image: url("/images/icons/letter.svg");
+  background-image: url("../images/icons/letter.svg");
   background-size: 15px 12px;
   background-repeat: no-repeat;
   background-position: right 20px center;
@@ -2671,12 +2674,12 @@ body {
 
 .quantity-minus-button {
   left: 0;
-  background-image: url("/images/icons/minus.svg");
+  background-image: url("../images/icons/minus.svg");
 }
 
 .quantity-plus-button {
   right: 0;
-  background-image: url("/images/icons/plus.svg");
+  background-image: url("../images/icons/plus.svg");
 }
 
 .quantity-button:hover {
@@ -2709,6 +2712,8 @@ body {
   padding-right: 60px;
   text-align: center;
   background-color: transparent;
+  -webkit-appearance: textfield;
+  appearance: textfield;
 }
 
 .quantity-field::-webkit-outer-spin-button,
