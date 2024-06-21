@@ -130,9 +130,9 @@ body {
 /* Шапка */
 
 .page-header {
-  padding: 20px 60px;
+  padding: 22px 60px 20px;
   color: #000000;
-  background: linear-gradient(#ffffff 40px, #ffe17f 40px);
+  background: linear-gradient(#ffffff 42px, #ffe17f 40px);
 }
 
 /* Увеличивает шапку на главной странице за счет бОльшего padding-bottom */
@@ -188,7 +188,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 /* Форма поиска */
@@ -288,7 +288,7 @@ body {
 
 .user-navigation {
   display: flex;
-  width: 500px;
+  width: 497px;
   justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
@@ -298,7 +298,6 @@ body {
 }
 
 .navigation-link {
-  position: relative;
   display: inline-block;
   color: inherit;
   text-decoration: none;
@@ -342,9 +341,6 @@ body {
 }
 
 .login-item {
-  width: 234px;
-  display: flex;
-  justify-content: space-between;
   margin-right: auto;
 }
 
@@ -544,11 +540,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Raleway", "Arial", sans-serif;
-  letter-spacing: 0.2em;
+  letter-spacing: 3.5px;
   line-height: 21px;
   text-transform: uppercase;
   list-style-type: none;
 }
+
+/* Добавляет подчеркивание активной странице */
 
 .site-navigation-active-page {
   padding-bottom: 6px;
@@ -615,7 +613,7 @@ body {
   top: 55px;
   z-index: 1;
   width: 1160px;
-  padding: 5px 60px 40px;
+  padding: 5px 59px 43px;
   background-color: #ffe17f;
 }
 
@@ -628,16 +626,15 @@ body {
 
 .catalog-table-data {
   width: 200px;
-  padding-bottom: 15px;
+  padding-bottom: 14px;
   padding-right: 10px;
 }
 
 .catalog-table-column-1 {
-  width: 242px;
+  width: 237px;
 }
 
 .catalog-link {
-  position: relative;
   font-family: "Rubik", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -649,7 +646,8 @@ body {
 }
 
 .catalog-link-active {
-  padding-bottom: 6px;
+  position: relative;
+  padding-bottom: 5px;
 }
 
 .catalog-link-active::after {
@@ -670,7 +668,7 @@ body {
 
 .slider {
   position: relative;
-  margin-bottom: 68px;
+  margin-bottom: 69px;
 }
 
 .slider-list {
@@ -762,7 +760,7 @@ body {
 }
 
 .slider-info-button {
-  max-width: 220px;
+  max-width: 223px;
   margin-bottom: 50px;
 }
 
@@ -908,7 +906,7 @@ body {
   content: "";
   display: block;
   height: 160px;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   background-color: #ffe17f;
   background-size: 160px 160px;
   background-position: center center;
@@ -969,7 +967,7 @@ body {
 /* Услуги */
 
 .services {
-  margin-bottom: 70px;
+  margin-bottom: 69px;
 }
 
 .services-background-color-wrapper {
@@ -978,16 +976,16 @@ body {
 
 .services-column-wrapper {
   display: flex;
-  padding-bottom: 72px;
-  margin-bottom: 68px;
+  padding-bottom: 71px;
+  margin-bottom: 70px;
 }
 
 /* Левая колонка блока, перечисление услуг */
 
 .services-list {
-  width: 286px;
+  width: 287px;
   margin: 0;
-  padding: 64px 0;
+  padding: 63px 0;
   list-style-type: none;
   border-right: 7px solid #000000;
 }
@@ -1237,14 +1235,14 @@ body {
 }
 
 .about-button {
-  max-width: 270px;
+  max-width: 273px;
 }
 
 /* Контакты */
 
 .contacts {
   width: 532px;
-  padding: 0 15px 68px 0;
+  padding: 0 15px 69px 0;
 }
 
 .contacts::before {
@@ -1321,7 +1319,7 @@ body {
 }
 
 .contacts-button {
-  max-width: 260px;
+  max-width: 262px;
 }
 
 /* Рассылка */
@@ -1335,7 +1333,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 145px;
+  margin-bottom: 143px;
 }
 
 .subscribe .main-title {
@@ -1515,8 +1513,8 @@ body {
   grid-row: 2/3;
   gap: 10px 32px;
   justify-self: center;
-  justify-content: center;
   align-self: start;
+  justify-content: flex-start;
   padding-top: 4px;
 }
 
@@ -1607,9 +1605,9 @@ body {
 .socials-list {
   grid-row: 3/4;
   grid-column: 2/3;
-  display: flex;
-  justify-content: center;
   justify-self: center;
+  display: flex;
+  justify-content: flex-start;
   gap: 13px;
   flex-wrap: wrap;
   margin: 0;
@@ -1707,7 +1705,7 @@ body {
 /* Блок с хлебными крошками */
 
 .inner-header {
-  padding: 35px 21px 34px 60px;
+  padding: 36px 21px 33px 60px;
 }
 
 .inner-title {
@@ -1808,7 +1806,7 @@ body {
 }
 
 .filter-group-bluetooth-group {
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 }
 
 .filter-group-title {
@@ -1907,7 +1905,6 @@ body {
 }
 
 .catalog-filter-label {
-
   font-size: 14px;
   line-height: 20px;
 }
@@ -2057,7 +2054,7 @@ body {
 }
 
 .filter-button {
-  min-width: 220px;
+  min-width: 223px;
 }
 
 /* Сортировка результатов */
@@ -2068,6 +2065,7 @@ body {
 
 .sorting-line {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   padding: 20px 40px;
@@ -2075,13 +2073,11 @@ body {
 
 .sorting-line .catalog-filter-title {
   max-width: 200px;
-  margin-right: 203px;
 }
 
 .select-control {
   font-family: "Rubik", "Arial", sans-serif;
   max-width: 150px;
-  margin-right: auto;
   padding: 0;
   padding-right: 32px;
   font-size: 18px;
@@ -2114,6 +2110,12 @@ body {
 .select-control:disabled {
   opacity: 0.3;
   cursor: auto;
+}
+
+.sorting-buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .sorting-button {
@@ -2160,14 +2162,14 @@ body {
 /* Карточки товаров */
 
 .products-wrapper {
-  padding: 70px 40px 79px;
+  padding: 70px 40px 78px;
   background-color: #ffffff;
 }
 
 .products-card-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, 360px);
-  gap: 43px 40px;
+  gap: 44px 40px;
   margin: 0;
   margin-bottom: 43px;
   padding: 0;
@@ -2309,8 +2311,8 @@ body {
 
 .download-more-button {
   width: 100%;
-  margin-bottom: 44px;
-  padding: 16px;
+  margin-bottom: 45px;
+  padding: 15px;
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
