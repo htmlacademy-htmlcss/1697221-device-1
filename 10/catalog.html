@@ -29,7 +29,7 @@
               </label>
               <input class="search-field" type="search" id="search-input" name="search-field" value="Текст поиска" required>
             </span>
-              <!-- Обертка ниже нужна для того, чтобы в состоянии фокуса кнопка поиска обрамлялось прямоугольником в соответствии со стайлгайдом -->
+            <!-- Обертка ниже нужна для того, чтобы в состоянии фокуса кнопка поиска обрамлялась прямоугольником в соответствии со стайлгайдом -->
             <span class="search-button-wrapper">
               <button class="button search-button" type="submit">Найти</button>
             </span>
@@ -41,8 +41,9 @@
                 <svg aria-hidden="true" focusable="false" width="15" height="12" viewBox="0 0 15 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 12H14C13.8 9.4 11.9 7.2 9.3 6.5C10.3 5.9 11 4.8 11 3.5C11 1.6 9.4 0 7.5 0C5.6 0 4 1.6 4 3.5C4 4.8 4.7 5.9 5.7 6.5C3.1 7.2 1.2 9.4 1 12Z" />
                 </svg>Коля Петухов</a>
-
-              <a class="navigation-link user-navigation-link logout-link" href="#"><span class="logout-text">Выйти</span></a>
+            </li>
+            <li class="user-navigation-item login-item">
+              <a class="navigation-link user-navigation-link" href="#"><span class="logout-text">Выйти</span></a>
             </li>
             <li class="user-navigation-item">
               <a class="navigation-link user-navigation-link" href="#">
@@ -131,7 +132,7 @@
                   </tr>
                   <tr class="catalog-table-row">
                     <td class="catalog-table-data catalog-table-column-1">
-                      <a class="navigation-link catalog-link" href="catalog.html">Моноподы для селфи</a>
+                      <a class="navigation-link catalog-link catalog-link-active">Моноподы для селфи</a>
                     </td>
                     <td class="catalog-table-data catalog-table-column-2">
                       <a class="navigation-link catalog-link" href="#">Умные часы</a>
@@ -179,7 +180,7 @@
             <a class="breadcrumbs-link" href="#">Каталог товаров</a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Моноподы для селфи</a>
+            Моноподы для селфи
           </li>
         </ul>
       </header>
@@ -295,18 +296,20 @@
                   <option value="cheap">Дешевые</option>
                 </select>
 
-                <button class="button sorting-button">
-                  <svg aria-hidden="true" focusable="false" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 0L11.5 10H0.5" fill="black" />
-                  </svg>
-                  <span class="visually-hidden">По возрастанию</span>
-                </button>
-                <button class="button sorting-button sorting-button-down">
-                  <svg aria-hidden="true" focusable="false" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 0L11.5 10H0.5" fill="black" />
-                  </svg>
-                  <span class="visually-hidden">По убыванию</span>
-                </button>
+                <div class="sorting-buttons-wrapper">
+                  <button class="button sorting-button">
+                    <svg aria-hidden="true" focusable="false" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 0L11.5 10H0.5" fill="black" />
+                    </svg>
+                    <span class="visually-hidden">По возрастанию</span>
+                  </button>
+                  <button class="button sorting-button sorting-button-down">
+                    <svg aria-hidden="true" focusable="false" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 0L11.5 10H0.5" fill="black" />
+                    </svg>
+                    <span class="visually-hidden">По убыванию</span>
+                  </button>
+                </div>
               </div>
 
               <!-- Карточки товаров -->
