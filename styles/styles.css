@@ -645,6 +645,8 @@ body {
   text-decoration: none;
 }
 
+/* Добавляет полосу подчеркивания активному пункту */
+
 .catalog-link-active {
   position: relative;
   padding-bottom: 5px;
